@@ -8,10 +8,9 @@ const menuData = {
                     { label: "All Programmes", url: "#all-programmes" },
                     { label: "Certificate", url: "#certificate" },
                     { label: "Foundation", url: "#foundation" },
-                    { label: "Diploma", url: "#diploma" },
-                    { label: "Higher National Diploma", url: "#hnd" },
-                    { label: "Undergraduate", url: "#undergraduate" },
-                    { label: "Top-Up", url: "#topup" },
+                    { label: "Undergraduate", url: "#diploma" },
+                    { label: "Professional", url: "#hnd" },
+                    { label: "Ministry Programs", url: "#undergraduate" },
                     { label: "Postgraduate", url: "#postgraduate" }
                 ]
             },
@@ -37,12 +36,13 @@ const menuData = {
             }
         ],
         feature: {
+            
             label: "Find Your Future",
             title: "Find the right programme",
-            text: "Search programmes by level, faculty and study area.",
-            button: "Programme Finder",
-            url: "#programme-finder"
-        }
+            text: "Add your qualifications and discover programmes you may be eligible for.",
+            type: "eligibilityFinder"
+            }
+        
     },
     about: {
         label: "ABOUT",
@@ -144,14 +144,143 @@ function createColumns(columns) {
 }
 
 function createFeature(feature) {
+
+    // ==========================================
+    // PROGRAMME ELIGIBILITY FINDER
+    // ==========================================
+
+    if (feature.type === "eligibilityFinder") {
+
+        return `
+            <div class="mega-column programme-finder-column">
+
+                <div class="feature-panel programme-finder-panel">
+
+                    <!-- Header -->
+                    <div class="feature-label">
+                        ${feature.label}
+                    </div>
+
+                    <h3>
+                        ${feature.title}
+                    </h3>
+
+                    <p class="finder-description">
+                        ${feature.text}
+                    </p>
+
+
+                    <!-- Qualification -->
+                    <div class="finder-field">
+
+                        <label>
+                            Add your qualifications
+                        </label>
+
+                        <div class="qualification-buttons">
+
+                            <button
+                                type="button"
+                                class="qualification-btn active"
+                                data-qualification="al">
+
+                                <span class="qualification-short">
+                                    A/L
+                                </span>
+
+                                <span class="qualification-name">
+                                    Advanced Level
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="qualification-btn"
+                                data-qualification="ol">
+
+                                <span class="qualification-short">
+                                    O/L
+                                </span>
+
+                                <span class="qualification-name">
+                                    Ordinary Level
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="qualification-btn"
+                                data-qualification="foundation">
+
+                                <span class="qualification-short">
+                                    FND
+                                </span>
+
+                                <span class="qualification-name">
+                                    Foundation
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Action -->
+                    <button
+                        type="button"
+                        class="finder-button"
+                        id="findEligibleProgrammes">
+
+                        FIND ELIGIBLE PROGRAMMES
+
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+        `;
+    }
+
+
+    // ==========================================
+    // NORMAL FEATURE CARD
+    // ==========================================
+
     return `
         <div class="mega-column">
+
             <div class="feature-panel">
-                <div class="feature-label">${feature.label}</div>
-                <h3>${feature.title}</h3>
-                <p>${feature.text}</p>
-                <a href="${feature.url}" class="feature-button">${feature.button} →</a>
+
+                <div class="feature-label">
+                    ${feature.label}
+                </div>
+
+                <h3>
+                    ${feature.title}
+                </h3>
+
+                <p>
+                    ${feature.text}
+                </p>
+
+                <a
+                    href="${feature.url}"
+                    class="feature-button">
+
+                    ${feature.button} →
+
+                </a>
+
             </div>
+
         </div>
     `;
 }
