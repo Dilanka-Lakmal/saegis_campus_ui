@@ -48,7 +48,7 @@
 .ts-dots{display:flex;gap:8px;}
 .ts-dot{width:8px;height:8px;border-radius:50%;background:gray;border:none;cursor:pointer;padding:0;
   transition:all .25s ease;}
-.ts-dot.active{background:var(--coral);width:22px;border-radius:5px;}
+.ts-dot.active{background:navy;width:22px;border-radius:5px;}
 
 @media (max-width:640px){
   .ts-stage{padding:36px 22px;min-height:400px;}
