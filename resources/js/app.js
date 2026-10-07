@@ -1,5 +1,6 @@
 import '../css/app.css';
 import './menu.js';
+import './faculties.js';
 
 // ==========================================
 // MEMBER 4: TESTIMONIALS & PARTNERS SLIDER
