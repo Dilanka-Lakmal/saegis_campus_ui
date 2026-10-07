@@ -1,0 +1,409 @@
+/* =============================================================
+   Introduction + Course Categories
+   Colour variables are defined here, scoped to these two sections,
+   so they work even if no global :root variables exist.
+============================================================= */
+.as-section,
+.course-categories {
+    --navy: #093D85;
+    --royal: #4169E1;
+    --sky: #00A8E8;
+    --coral: #093D85;
+    --gray: #6B7280;
+    --line: #e7e9ee;
+    --bg-soft: #F5F7FA;
+    --paper: #ffffff;
+    --ink: #1A1D2E;
+}
+
+
+/* =============================================================
+   INTRODUCTION: "We are Saegis Campus" + Saegis Strength
+============================================================= */
+.as-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px;
+}
+
+.as-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 56px;
+    align-items: stretch;
+}
+
+.as-eyebrow {
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 10px;
+}
+
+.as-accent {
+    color: var(--sky);
+    font-weight: 700;
+}
+
+.as-heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.as-divider {
+    width: 64px;
+    height: 3px;
+    background: var(--coral);
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.as-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.as-text {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 26px;
+}
+
+.as-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    text-decoration: none;
+    transition: background .18s ease, transform .18s ease;
+}
+
+.as-cta:hover {
+    background: var(--royal);
+    transform: translateY(-1px);
+}
+
+.as-strength {
+    display: flex;
+    flex-direction: column;
+}
+
+.as-stat-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.as-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 26px 14px;
+    border-radius: 14px;
+
+    /* Light blue background */
+    background: #EAF6FF;
+
+    /* Light blue border */
+    border: 1px solid #D5EAF7;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+}
+
+
+.as-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(9, 61, 133, 0.12);
+    background: #fff;
+}
+
+.as-stat-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 14px;
+}
+
+.as-icon-navy  { background: var(--navy); }
+.as-icon-royal { background: var(--royal); }
+.as-icon-sky   { background: var(--sky); }
+
+.as-stat-number {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.as-plus {
+    color: var(--coral);
+}
+
+.as-stat-label {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--royal);
+    line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+    .as-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 560px) {
+    .as-stat-grid {
+        grid-template-columns: 1fr;
+    }
+    .as-heading { font-size: 26px; }
+}
+
+
+
+/* =============================================================
+   COURSE CATEGORIES SLIDER
+   Every rule is scoped under .course-categories so the generic
+   names (.card, .btn, .facts) cannot clash with other members'
+   sections.
+============================================================= */
+.course-categories {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 40px 44px;
+}
+
+.course-categories .level-slider {
+    position: relative;
+}
+
+.course-categories .level-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 4px 4px 12px;
+    scrollbar-width: none;
+}
+
+.course-categories .level-track::-webkit-scrollbar {
+    display: none;
+}
+
+.course-categories .level-track .card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+}
+
+.course-categories .level-slider-btn {
+    position: absolute;
+    top: calc(50% - 12px);
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--royal);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(9, 61, 133, .14);
+    z-index: 2;
+    transition: background .15s ease;
+}
+
+.course-categories .level-slider-btn:hover { background: var(--sky); }
+.course-categories .level-slider-btn.prev { left: -20px; }
+.course-categories .level-slider-btn.next { right: -20px; }
+
+.course-categories .card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .18s ease, transform .18s ease;
+}
+
+.course-categories .card:hover {
+    box-shadow: 0 16px 32px rgba(9, 61, 133, 0.12);
+    transform: translateY(-3px);
+}
+
+.course-categories .card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-soft);
+}
+
+.course-categories .card-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.course-categories .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 10px;
+}
+
+.course-categories .facts {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.course-categories .facts li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.course-categories .facts li i {
+    color: var(--sky);
+    font-size: 11px;
+    width: 14px;
+}
+
+.course-categories .facts li.intake {
+    color: var(--navy);
+    font-weight: 600;
+}
+
+.course-categories .facts li.intake i {
+    color: var(--coral);
+}
+
+.course-categories .card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.course-categories .btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.course-categories .btn-outline {
+    border-color: var(--royal);
+    color: var(--royal);
+    background: transparent;
+}
+
+.course-categories .btn-outline:hover {
+    background: var(--royal);
+    color: #fff;
+}
+
+.course-categories .btn-solid {
+    background: var(--coral);
+    color: #fff;
+}
+
+.course-categories .btn-solid:hover {
+    background: #4169E1;
+}
+
+@media (max-width: 640px) {
+    .course-categories { padding: 30px 16px; }
+    .course-categories .level-slider-btn { display: none; }
+    .course-categories .level-track .card { flex-basis: 78vw; }
+}
+
+
+
+
+.course-heading {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.heading-small {
+    display: block;
+    color: var(--sky);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+
+.course-heading h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.course-heading h2 span {
+    color: var(--sky);
+}
+
+.course-heading p {
+    max-width: 650px;
+    margin: 14px auto 0;
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.as-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 25px 24px 10px;
+}
+
+.course-categories {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding:30px 44px 20px;
+}
+
