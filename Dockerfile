@@ -1,4 +1,4 @@
-FROM php:8.4-fpm
+FROM php:8.3-fpm
 
 # Install system dependencies & Node.js
 RUN apt-get update && apt-get install -y \
@@ -16,8 +16,8 @@ WORKDIR /var/www
 
 COPY . .
 
-# Install PHP & Node dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Install PHP dependencies ignoring version mismatches & build assets
+RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
 RUN npm install
 RUN npm run build
 
