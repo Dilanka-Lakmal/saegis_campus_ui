@@ -1,9 +1,9 @@
-FROM php:8.3-fpm
+FROM php:8.4-fpm
 
-# Install system dependencies & Node.js
+# Install system dependencies & Node.js 22.x
 RUN apt-get update && apt-get install -y \
     git unzip libpng-dev libonig-dev libxml2-dev zip curl nginx \
-    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs
 
 # Install PHP extensions
@@ -16,8 +16,8 @@ WORKDIR /var/www
 
 COPY . .
 
-# Install PHP dependencies ignoring version mismatches & build assets
-RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
+# Install PHP & Node dependencies
+RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 RUN npm run build
 
