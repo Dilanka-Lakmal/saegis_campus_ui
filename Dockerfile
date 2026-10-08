@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
 # Install system dependencies & Node.js
 RUN apt-get update && apt-get install -y \
@@ -21,13 +21,13 @@ RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 RUN npm run build
 
-# Create SQLite database
+# Create SQLite database & run migrations
 RUN touch database/database.sqlite
 RUN php artisan migrate --force
 
-# Configure Nginx & Permissions
+# Set file permissions for Laravel
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD php artisan serve --host=0.0.0.0 --port=80
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
