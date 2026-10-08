@@ -25,6 +25,11 @@ RUN npm run build
 RUN touch database/database.sqlite
 RUN php artisan migrate --force
 
+# Optimize Laravel cache for production
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
+
 # Set file permissions for Laravel
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
