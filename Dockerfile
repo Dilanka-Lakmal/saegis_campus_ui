@@ -21,14 +21,14 @@ RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 RUN npm run build
 
+# Clear old cached configurations so APP_DEBUG takes effect
+RUN php artisan config:clear
+RUN php artisan route:clear
+RUN php artisan view:clear
+
 # Create SQLite database & run migrations
 RUN touch database/database.sqlite
 RUN php artisan migrate --force
-
-# Optimize Laravel cache for production
-RUN php artisan config:cache
-RUN php artisan route:cache
-RUN php artisan view:cache
 
 # Set file permissions for Laravel
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
