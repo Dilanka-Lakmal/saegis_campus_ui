@@ -43,39 +43,6 @@
                 </div>
             </article>
 
-            <article class="news-card">
-                <div class="news-card__thumb">
-                    <img src="images/news/news4.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
-                </div>
-                <div class="news-card__body">
-                    <p class="news-meta"><span class="news-card__category">Campus</span><time datetime="2026-09-14">14 September 2026</time></p>
-                    <h3 class="news-card__title">Saegis holds its 2026 graduation ceremony</h3>
-                    <a href="news-details.html" class="news-readmore">Read more <span class="visually-hidden">about Saegis holds its 2026 graduation ceremony</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <div class="news-card__thumb">
-                    <img src="images/news/news5.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
-                </div>
-                <div class="news-card__body">
-                    <p class="news-meta"><span class="news-card__category">Campus</span><time datetime="2026-09-14">14 September 2026</time></p>
-                    <h3 class="news-card__title">Saegis holds its 2026 graduation ceremony</h3>
-                    <a href="news-details.html" class="news-readmore">Read more <span class="visually-hidden">about Saegis holds its 2026 graduation ceremony</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <div class="news-card__thumb">
-                    <img src="images/news/news6.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
-                </div>
-                <div class="news-card__body">
-                    <p class="news-meta"><span class="news-card__category">Campus</span><time datetime="2026-09-14">14 September 2026</time></p>
-                    <h3 class="news-card__title">Saegis holds its 2026 graduation ceremony</h3>
-                    <a href="news-details.html" class="news-readmore">Read more <span class="visually-hidden">about Saegis holds its 2026 graduation ceremony</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </article>
-
         </div>
 
     </div>
