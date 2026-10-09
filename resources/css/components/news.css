@@ -311,12 +311,12 @@
     border-top: 1px solid var(--n-line);
 }
 
-.news-card:hover .news-card__title {
+/* .news-card:hover .news-card__title {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--n-sky);
     text-underline-offset: 4px;
-}
+} */
 
 /* Stretched link: the whole card is clickable via its "Read more" link */
 .news-card .news-readmore::after { content: ""; position: absolute; inset: 0; }
