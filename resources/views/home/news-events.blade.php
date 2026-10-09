@@ -45,7 +45,7 @@
 
             <article class="news-card">
                 <div class="news-card__thumb">
-                    <img src="images/news/news1.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
+                    <img src="images/news/news4.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
                 </div>
                 <div class="news-card__body">
                     <p class="news-meta"><span class="news-card__category">Campus</span><time datetime="2026-09-14">14 September 2026</time></p>
@@ -56,7 +56,7 @@
 
             <article class="news-card">
                 <div class="news-card__thumb">
-                    <img src="images/news/news1.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
+                    <img src="images/news/news5.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
                 </div>
                 <div class="news-card__body">
                     <p class="news-meta"><span class="news-card__category">Campus</span><time datetime="2026-09-14">14 September 2026</time></p>
@@ -67,7 +67,7 @@
 
             <article class="news-card">
                 <div class="news-card__thumb">
-                    <img src="images/news/news1.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
+                    <img src="images/news/news6.jpg" alt="Saegis graduation ceremony" width="1033" height="768" loading="lazy" decoding="async">
                 </div>
                 <div class="news-card__body">
                     <p class="news-meta"><span class="news-card__category">Campus</span><time datetime="2026-09-14">14 September 2026</time></p>
