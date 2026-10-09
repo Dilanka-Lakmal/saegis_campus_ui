@@ -1,442 +1,261 @@
 /* =========================================================
-   SAeGIS FACULTIES
+   FACULTIES SECTION 
    ========================================================= */
-
+ 
 .saegis-faculties-section {
-    width: 100%;
-    padding: 80px 0;
-    
+    --fac-navy: #0A2A5E;
+    --fac-blue: #123C86;
+    --fac-sky: #0EA5D9;
+    --fac-ink: #16213E;
+    --fac-slate: #5B6B8C;
+    --fac-bg: #F5F9FF;
+    --fac-line: #E3EAF7;
+    --fac-radius: 14px;
+
+    padding: clamp(56px, 8vw, 96px) 0;
+    background: var(--fac-bg);
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
+/* ---------- Heading ---------- */
 
-/* =========================================================
-   SECTION TOP
-   ========================================================= */
-
-.faculties-section-top {
+.saegis-faculties-section .faculties-section-top {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 30px;
-
-    margin-bottom: 40px;
+    gap: 20px 32px;
+    margin-bottom: clamp(28px, 4vw, 44px);
 }
 
-.faculties-section-header {
-    max-width: 700px;
-}
-
-
-/* Eyebrow */
+.faculties-section-header { max-width: 640px; }
 
 .faculties-eyebrow {
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    color: #0EA5D9;
-
-    font-size: 14px;
+    display: block;
+    margin-bottom: 12px;
+    color: var(--fac-sky);
+    font-size: 13px;
     font-weight: 700;
-
-    letter-spacing: 2px;
+    letter-spacing: 1.6px;
     text-transform: uppercase;
 }
 
-
-/* Main heading */
-
 .faculties-section-header h2 {
     margin: 0;
-
-    color: #16213e;
-
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 1.2;
+    color: var(--fac-ink);
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
 }
 
-
-/* View all */
+.faculties-subtitle {
+    margin: 14px 0 0;
+    color: var(--fac-slate);
+    font-size: 1rem;
+    line-height: 1.65;
+}
 
 .faculties-view-all {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
-    color: #0a2a5e;
-
+    padding: 11px 20px;
+    border: 1.5px solid var(--fac-navy);
+    border-radius: 999px;
+    color: var(--fac-navy);
     font-size: 14px;
-    font-weight: 600;
-
+    font-weight: 700;
     text-decoration: none;
-
     white-space: nowrap;
-
-    transition: color 0.3s ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.faculties-view-all span {
-    font-size: 20px;
+.faculties-view-all span { transition: transform 0.25s ease; }
 
-    transition: transform 0.3s ease;
+.faculties-view-all:hover,
+.faculties-view-all:focus-visible { background: var(--fac-navy); color: #FFFFFF; }
+
+.faculties-view-all:hover span { transform: translateX(4px); }
+
+.faculties-view-all:focus-visible { outline: 3px solid var(--fac-sky); outline-offset: 3px; }
+
+/* ---------- Grid: 1 column → 2 (tablet) → 4 (large desktop) ---------- */
+
+.faculties-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
 }
 
-.faculties-view-all:hover {
-    color: #0EA5D9;
-}
+@media (min-width: 640px)  { .faculties-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1200px) { .faculties-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; } }
 
-.faculties-view-all:hover span {
-    transform: translateX(5px);
-}
-
-
-/* =========================================================
-   SWIPER
-   ========================================================= */
-
-.saegis_home_departments {
-    width: 100%;
-    padding-bottom: 55px !important;
-}
-
-.saegis_home_departments .swiper-wrapper {
-    align-items: stretch;
-}
-
-.saegis_home_departments .swiper-slide {
-    height: auto;
-    display: flex;
-}
-
-
-/* =========================================================
-   FACULTY CARD
-   ========================================================= */
+/* ---------- Card ---------- */
 
 .faculty-card {
-    width: 100%;
-
+    position: relative;
+    isolation: isolate;
     display: flex;
     flex-direction: column;
-
     overflow: hidden;
+    padding: 28px 24px 24px;
+    background: #FFFFFF;
+    border: 1px solid var(--fac-line);
+    border-radius: var(--fac-radius);
+    box-shadow: 0 1px 2px rgba(10, 42, 94, 0.04), 0 6px 18px rgba(10, 42, 94, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
 
-    background: #ffffff;
+/* Accent line: a short bar at rest, grows across the card on hover */
+.faculty-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--fac-sky);
+    transform: scaleX(0.16);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
 
-    border: 1px solid #e7edf5;
-
-    box-shadow: 0 10px 30px rgba(10, 42, 94, 0.08);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+/* Quiet geometric detail behind the content */
+.faculty-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    right: -60px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--fac-bg);
+    pointer-events: none;
 }
 
 .faculty-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 18px 40px rgba(10, 42, 94, 0.15);
+    transform: translateY(-4px);
+    border-color: var(--fac-sky);
+    box-shadow: 0 16px 34px rgba(10, 42, 94, 0.12);
 }
 
+.faculty-card:hover::before { transform: scaleX(1); }
 
-/* =========================================================
-   IMAGE
-   ========================================================= */
-
-.faculty-thumb {
-    width: 100%;
-    height: 240px;
-
-    overflow: hidden;
-
-    background: #eef3f8;
-}
-
-.faculty-thumb img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-}
-
-.faculty-card:hover .faculty-thumb img {
-    transform: scale(1.06);
-}
-
-
-/* =========================================================
-   CARD BODY
-   ========================================================= */
-
-.faculty-body {
-    flex: 1;
-
+.faculty-head {
     display: flex;
-    flex-direction: column;
-
-    padding: 25px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
 }
 
+.faculty-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--fac-line);
+    border-radius: 12px;
+    background: var(--fac-bg);
+    color: var(--fac-navy);
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-/* =========================================================
-   TAG
-   ========================================================= */
+.faculty-card:hover .faculty-icon { background: var(--fac-navy); color: #FFFFFF; }
 
 .faculty-tag {
-    align-self: flex-start;
-
-    display: inline-block;
-
-    margin-bottom: 14px;
-    padding: 6px 12px;
-
-    color: #0a2a5e;
-    background: #edf5ff;
-
-    border-radius: 30px;
-
-    font-size: 11px;
+    padding: 4px 11px;
+    border: 1px solid var(--fac-line);
+    border-radius: 999px;
+    background: #FFFFFF;
+    color: var(--fac-slate);
+    font-size: 12px;
     font-weight: 700;
-
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
 }
 
-
-/* =========================================================
-   TITLE
-   ========================================================= */
-
-.faculty-body h3 {
-    min-height: 58px;
-
-    margin: 0 0 14px;
-
-    color: #16213e;
-
-    font-size: 21px;
-    font-weight: 700;
-
-    line-height: 1.35;
+.faculty-card h3 {
+    margin: 0 0 10px;
+    color: var(--fac-ink);
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
-
-/* =========================================================
-   DESCRIPTION
-   ========================================================= */
-
-.faculty-body p {
+.faculty-card p {
     margin: 0 0 22px;
-
-    color: #5b6b8c;
-
-    font-size: 14px;
-    line-height: 1.7;
+    color: var(--fac-slate);
+    font-size: 14.5px;
+    line-height: 1.65;
 }
 
-
-/* =========================================================
-   INTERNATIONAL PROGRAM LINKS
-   ========================================================= */
-
-.international-description {
-    margin-bottom: 10px !important;
-}
+.faculty-card .international-description { margin-bottom: 12px; }
 
 .international-links {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     padding: 0;
-
     list-style: none;
 }
 
-.international-links li {
-    margin-bottom: 8px;
-}
+.international-links li { margin-bottom: 8px; }
 
 .international-links a {
-    color: #0a2a5e;
-
-    font-size: 13px;
-    font-weight: 600;
-
+    position: relative;
+    z-index: 1; /* above the card's stretched CTA link */
+    color: var(--fac-navy);
+    font-size: 13.5px;
+    font-weight: 700;
     text-decoration: none;
-
-    transition: color 0.3s ease;
 }
 
-.international-links a:hover {
-    color: #0EA5D9;
-}
+.international-links a::before { content: "→"; margin-right: 8px; color: var(--fac-sky); }
+.international-links a:hover { text-decoration: underline; }
+.international-links a:focus-visible { outline: 2px solid var(--fac-sky); outline-offset: 2px; }
 
-.international-links a::before {
-    content: "→";
-
-    margin-right: 8px;
-
-    color: #0EA5D9;
-}
-
-
-/* =========================================================
-   READ MORE
-   ========================================================= */
+/* ---------- CTA button (whole card is clickable) ---------- */
 
 .faculty-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    width: 100%;
-
+    gap: 10px;
+    min-height: 46px;
     margin-top: auto;
-    padding-top: 18px;
-
-    color: #0a2a5e;
-
-    border-top: 1px solid #e7edf5;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    letter-spacing: 0.7px;
-
-    transition: color 0.3s ease;
-}
-
-.faculty-arrow {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 34px;
-    height: 34px;
-
-    border-radius: 50%;
-
-    color: #ffffff;
-    background: #0a2a5e;
-
-    font-size: 18px;
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.faculty-link:hover {
-    color: #0EA5D9;
-}
-
-.faculty-link:hover .faculty-arrow {
-    background: #0EA5D9;
-
-    transform: translateX(4px);
-}
-
-
-/* =========================================================
-   SWIPER PAGINATION
-   ========================================================= */
-
-.faculty-pagination {
-    bottom: 5px !important;
-}
-
-.faculty-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-
-    opacity: 1;
-
-    background: #cbd5e1;
-
-    transition:
-        width 0.3s ease,
-        background 0.3s ease;
-}
-
-.faculty-pagination .swiper-pagination-bullet-active {
-    width: 25px;
-
+    padding: 0 18px;
     border-radius: 10px;
-
-    background: #0a2a5e;
+    background: var(--fac-navy);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
 }
 
+.faculty-link::after { content: ""; position: absolute; inset: 0; }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+.faculty-link i { font-size: 12px; transition: transform 0.25s ease; }
 
-@media (max-width: 991px) {
+.faculty-card:hover .faculty-link { background: var(--fac-blue); }
+.faculty-card:hover .faculty-link i { transform: translateX(4px); }
 
-    .saegis-faculties-section {
-        padding: 65px 0;
-    }
+.faculty-link:focus-visible { outline: none; }
 
-    .faculties-section-header h2 {
-        font-size: 32px;
-    }
-
-    .faculty-thumb {
-        height: 220px;
-    }
+.faculty-link:focus-visible::after {
+    outline: 3px solid var(--fac-sky);
+    outline-offset: -3px;
+    border-radius: var(--fac-radius);
 }
 
-
-@media (max-width: 767px) {
-
-    .faculties-section-top {
-        align-items: flex-start;
-        flex-direction: column;
-
-        margin-bottom: 30px;
-    }
-
-    .faculties-section-header h2 {
-        font-size: 28px;
-    }
-
-    .faculties-view-all {
-        margin-top: 5px;
-    }
-
-    .faculty-thumb {
-        height: 230px;
-    }
-
-    .faculty-body {
-        padding: 22px;
-    }
+@media (max-width: 639px) {
+    .faculty-card { padding: 24px 20px 20px; }
 }
 
-
-@media (max-width: 480px) {
-
-    .saegis-faculties-section {
-        padding: 50px 0;
-    }
-
-    .faculties-section-header h2 {
-        font-size: 25px;
-    }
-
-    .faculty-thumb {
-        height: 210px;
-    }
-
-    .faculty-body h3 {
-        font-size: 19px;
-    }
+@media (prefers-reduced-motion: reduce) {
+    .faculty-card, .faculty-card::before, .faculty-icon,
+    .faculty-link, .faculty-link i,
+    .faculties-view-all, .faculties-view-all span { transition: none; }
+    .faculty-card:hover, .faculty-card:hover .faculty-link i { transform: none; }
 }
-
