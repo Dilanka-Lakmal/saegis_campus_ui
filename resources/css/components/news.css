@@ -1,8 +1,5 @@
 /* =========================================================
-   NEWS SECTIONS  (load after index.css)
-   Reuses the site's --c-* variables when they exist and falls
-   back to the existing palette values when they don't.
-   Part A: "News & Events" feature + list   Part B: "Latest" grid
+   NEWS SECTIONS 
    ========================================================= */
  
 .news-section {
