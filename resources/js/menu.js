@@ -36,13 +36,11 @@ const menuData = {
             }
         ],
         feature: {
-            
             label: "Find Your Future",
             title: "Find the right programme",
             text: "Add your qualifications and discover programmes you may be eligible for.",
             type: "eligibilityFinder"
-            }
-        
+        }
     },
     about: {
         label: "ABOUT",
@@ -51,7 +49,9 @@ const menuData = {
             { heading: "Leadership", links: [{ label: "Top Management", url: "#top-management" }, { label: "Governing Council", url: "#governing-council" }] },
             { heading: "Academic Community", links: [{ label: "Key Academics", url: "#key-academics" }, { label: "Visiting Lecturers", url: "#visiting-lecturers" }] }
         ],
-        feature: { label: "Discover Saegis", title: "Learn about Saegis", text: "Discover our institution, leadership, mission and academic community.", button: "Explore Saegis", url: "#about-saegis" }
+        feature: {
+            // label: "Discover Saegis", title: "Learn about Saegis", text: "Discover our institution, leadership, mission and academic community.", button: "Explore Saegis", url: "#about-saegis" 
+        }
     },
     campus: {
         label: "CAMPUS",
@@ -60,7 +60,9 @@ const menuData = {
             { heading: "Student Support", links: [{ label: "Career Guidance", url: "#career-guidance" }, { label: "Student Services", url: "#student-services" }] },
             { heading: "Global Opportunities", links: [{ label: "Study Abroad", url: "#study-abroad" }, { label: "International Opportunities", url: "#international" }] }
         ],
-        feature: { label: "Student Experience", title: "Life beyond the classroom", text: "Discover student activities, support and opportunities.", button: "Explore Campus", url: "#campus" }
+        feature: { 
+            // label: "Student Experience", title: "Life beyond the classroom", text: "Discover student activities, support and opportunities.", button: "Explore Campus", url: "#campus" 
+        }
     },
     research: {
         label: "RESEARCH",
@@ -69,7 +71,9 @@ const menuData = {
             { heading: "Knowledge", links: [{ label: "Journals", url: "#journals" }, { label: "Publications", url: "#publications" }, { label: "Conferences", url: "#conferences" }] },
             { heading: "Research Community", links: [{ label: "Research Areas", url: "#research-areas" }, { label: "Researchers", url: "#researchers" }] }
         ],
-        feature: { label: "Discover", title: "Research at Saegis", text: "Explore research, publications and academic initiatives.", button: "Explore Research", url: "#research" }
+        feature: { 
+            // label: "Discover", title: "Research at Saegis", text: "Explore research, publications and academic initiatives.", button: "Explore Research", url: "#research"
+         }
     },
     resources: {
         label: "RESOURCES",
@@ -78,46 +82,89 @@ const menuData = {
             { heading: "Academic", links: [{ label: "Academic Calendar", url: "#calendar" }, { label: "Library", url: "#library" }] },
             { heading: "Students", links: [{ label: "Student Resources", url: "#student-resources" }, { label: "Student Portal", url: "#student-portal" }] }
         ],
-        feature: { label: "Quick Access", title: "Useful resources", text: "Find important information, academic resources and student services.", button: "View Resources", url: "#resources" }
+        feature: { 
+           // label: "Quick Access", title: "Useful resources", text: "Find important information, academic resources and student services.", button: "View Resources", url: "#resources"
+         }
     }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
     const desktopNav = document.getElementById("desktopNav");
+    const mobileNav = document.getElementById("mobileNav");
+    const mobileToggle = document.getElementById("mobileToggle");
+
     if (!desktopNav) return;
 
+    // ==========================================
+    // 1. POPULATE DESKTOP NAV
+    // ==========================================
     Object.entries(menuData).forEach(([key, menu]) => {
-        const li = document.createElement("li");
-        li.className = "nav-item";
-        li.innerHTML = `
-            <button class="nav-button" aria-expanded="false">
-                ${menu.label}
-                <span class="arrow">▾</span>
-            </button>
-            <div class="mega-menu">
-                <div class="mega-inner">
-                    <div class="mega-grid">
-                        ${createColumns(menu.columns)}
-                        ${createFeature(menu.feature)}
-                    </div>
+    const li = document.createElement("li");
+    li.className = "nav-item";
+    
+    // Check if feature exists before calling or fallback to empty string
+    const featureHtml = menu.feature ? createFeature(menu.feature) : "";
+
+    li.innerHTML = `
+        <button class="nav-button" aria-expanded="false">
+            ${menu.label}
+            <span class="arrow">▾</span>
+        </button>
+        <div class="mega-menu">
+            <div class="mega-inner">
+                <div class="mega-grid">
+                    ${createColumns(menu.columns)}
+                    ${featureHtml || ''}
                 </div>
             </div>
-        `;
-        desktopNav.appendChild(li);
-    });
+        </div>
+    `;
+    desktopNav.appendChild(li);
+});
 
-    // Add Contact Link
+    // Add Desktop Contact Link
     const contactLi = document.createElement("li");
     contactLi.innerHTML = `<a href="#contact" class="contact-link">CONTACT</a>`;
     desktopNav.appendChild(contactLi);
 
-    // Add Apply Button
+    // Add Desktop Apply Button
     const applyLi = document.createElement("li");
     applyLi.innerHTML = `<a href="#" class="apply-button" data-bs-toggle="modal" data-bs-target="#registerModal">APPLY NOW</a>`;
     desktopNav.appendChild(applyLi);
 
-    // Dropdown Interactions
-    const navItems = document.querySelectorAll(".nav-item");
+    // ==========================================
+    // 2. POPULATE VERTICAL MOBILE NAV
+    // ==========================================
+    if (mobileNav) {
+        let mobileHtml = `<ul class="mobile-menu-list">`;
+        Object.entries(menuData).forEach(([key, menu]) => {
+            mobileHtml += `
+                <li class="mobile-item">
+                    <button class="mobile-item-btn" type="button">
+                        <span>${menu.label}</span>
+                        <span class="mobile-arrow">▾</span>
+                    </button>
+                    <div class="mobile-dropdown">
+                        ${createMobileVerticalColumns(menu.columns)}
+                    </div>
+                </li>
+            `;
+        });
+
+        mobileHtml += `
+            <li class="mobile-item"><a href="#contact" class="mobile-direct-link">CONTACT</a></li>
+            <li class="mobile-item mobile-apply-wrapper">
+                <a href="#" class="apply-button mobile-apply-btn" data-bs-toggle="modal" data-bs-target="#registerModal">APPLY NOW</a>
+            </li>
+        </ul>`;
+
+        mobileNav.innerHTML = mobileHtml;
+    }
+
+    // ==========================================
+    // 3. DESKTOP DROPDOWN INTERACTIONS
+    // ==========================================
+    const navItems = desktopNav.querySelectorAll(".nav-item");
     navItems.forEach(item => {
         const button = item.querySelector(".nav-button");
         if (!button) return;
@@ -130,8 +177,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("click", () => navItems.forEach(i => i.classList.remove("open")));
+
+    // ==========================================
+    // 4. MOBILE HAMBURGER TOGGLE
+    // ==========================================
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = mobileNav.classList.toggle("open");
+            mobileToggle.classList.toggle("active");
+            mobileToggle.setAttribute("aria-expanded", isOpen);
+        });
+    }
+
+    // ==========================================
+    // 5. MOBILE ACCORDION (VERTICAL TOGGLE)
+    // ==========================================
+    const mobileBtns = document.querySelectorAll(".mobile-item-btn");
+    mobileBtns.forEach(btn => {
+        btn.addEventListener("click", function () {
+            const parent = this.parentElement;
+            const isOpen = parent.classList.contains("open");
+            document.querySelectorAll(".mobile-item").forEach(i => i.classList.remove("open"));
+            if (!isOpen) parent.classList.add("open");
+        });
+    });
 });
 
+// Helper for Desktop Mega Menu Columns
 function createColumns(columns) {
     return columns.map(col => `
         <div class="mega-column">
@@ -143,144 +216,71 @@ function createColumns(columns) {
     `).join("");
 }
 
+// Helper for Mobile Vertical Sub-Links
+function createMobileVerticalColumns(columns) {
+    return columns.map(col => `
+        <div class="mobile-vertical-group">
+            <div class="mobile-subheading">${col.heading}</div>
+            <div class="mobile-vertical-links">
+                ${col.links.map(link => `<a href="${link.url}">${link.label}</a>`).join("")}
+            </div>
+        </div>
+    `).join("");
+}
+
+// Helper for Feature Panels & Eligibility Finder
 function createFeature(feature) {
+    // Return empty string if feature is missing or has no valid properties
+    if (!feature || typeof feature !== "object" || Object.keys(feature).length === 0) {
+        return "";
+    }
 
-    // ==========================================
-    // PROGRAMME ELIGIBILITY FINDER
-    // ==========================================
-
+    // Eligibility Finder Card
     if (feature.type === "eligibilityFinder") {
-
         return `
             <div class="mega-column programme-finder-column">
-
                 <div class="feature-panel programme-finder-panel">
-
-                    <!-- Header -->
-                    <div class="feature-label">
-                        ${feature.label}
-                    </div>
-
-                    <h3>
-                        ${feature.title}
-                    </h3>
-
-                    <p class="finder-description">
-                        ${feature.text}
-                    </p>
-
-
-                    <!-- Qualification -->
+                    <div class="feature-label">${feature.label || ''}</div>
+                    <h3>${feature.title || ''}</h3>
+                    <p class="finder-description">${feature.text || ''}</p>
                     <div class="finder-field">
-
-                        <label>
-                            Add your qualifications
-                        </label>
-
+                        <label>Add your qualifications</label>
                         <div class="qualification-buttons">
-
-                            <button
-                                type="button"
-                                class="qualification-btn active"
-                                data-qualification="al">
-
-                                <span class="qualification-short">
-                                    A/L
-                                </span>
-
-                                <span class="qualification-name">
-                                    Advanced Level
-                                </span>
-
+                            <button type="button" class="qualification-btn active" data-qualification="al">
+                                <span class="qualification-short">A/L</span>
+                                <span class="qualification-name">Advanced Level</span>
                             </button>
-
-
-                            <button
-                                type="button"
-                                class="qualification-btn"
-                                data-qualification="ol">
-
-                                <span class="qualification-short">
-                                    O/L
-                                </span>
-
-                                <span class="qualification-name">
-                                    Ordinary Level
-                                </span>
-
+                            <button type="button" class="qualification-btn" data-qualification="ol">
+                                <span class="qualification-short">O/L</span>
+                                <span class="qualification-name">Ordinary Level</span>
                             </button>
-
-
-                            <button
-                                type="button"
-                                class="qualification-btn"
-                                data-qualification="foundation">
-
-                                <span class="qualification-short">
-                                    FND
-                                </span>
-
-                                <span class="qualification-name">
-                                    Foundation
-                                </span>
-
+                            <button type="button" class="qualification-btn" data-qualification="foundation">
+                                <span class="qualification-short">FND</span>
+                                <span class="qualification-name">Foundation</span>
                             </button>
-
                         </div>
-
                     </div>
-
-
-                    <!-- Action -->
-                    <button
-                        type="button"
-                        class="finder-button"
-                        id="findEligibleProgrammes">
-
-                        FIND ELIGIBLE PROGRAMMES
-
-                        <span>→</span>
-
+                    <button type="button" class="finder-button" id="findEligibleProgrammes">
+                        FIND ELIGIBLE PROGRAMMES <span>→</span>
                     </button>
-
                 </div>
-
             </div>
         `;
     }
 
-
-    // ==========================================
-    // NORMAL FEATURE CARD
-    // ==========================================
-
-    return `
-        <div class="mega-column">
-
-            <div class="feature-panel">
-
-                <div class="feature-label">
-                    ${feature.label}
+    // Standard Feature Card (only if title exists)
+    if (feature.title) {
+        return `
+            <div class="mega-column">
+                <div class="feature-panel">
+                    <div class="feature-label">${feature.label || ''}</div>
+                    <h3>${feature.title || ''}</h3>
+                    <p>${feature.text || ''}</p>
+                    <a href="${feature.url || '#'}" class="feature-button">${feature.button || 'Explore'} →</a>
                 </div>
-
-                <h3>
-                    ${feature.title}
-                </h3>
-
-                <p>
-                    ${feature.text}
-                </p>
-
-                <a
-                    href="${feature.url}"
-                    class="feature-button">
-
-                    ${feature.button} →
-
-                </a>
-
             </div>
+        `;
+    }
 
-        </div>
-    `;
+    return "";
 }

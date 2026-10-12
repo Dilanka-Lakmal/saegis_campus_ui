@@ -1,0 +1,236 @@
+/* ==========================================
+   NAVBAR INTERACTIONS & HERO TRANSITIONS
+========================================== */
+/* Fade out hero text when a navigation menu is open */
+.main-nav:has(.nav-item.open) ~ #heroVideoSection .overlay-text,
+body:has(.nav-item.open) .overlay-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+/* Ensure smooth transition for hero text */
+.overlay-text {
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+/* ==========================================
+   HERO VIDEO BANNER / SLIDER
+========================================== */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    height: 80vh;
+    overflow: hidden;
+    background: #093D85;
+    display: flex;
+    align-items: center;
+}
+
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Gradient Overlay for Better Readability */
+.hero-slider::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Container */
+.overlay-text {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    max-width: 850px;
+    width: 45%;
+    padding-left: 80px;
+    padding-right: 40px;
+    color: #ffffff;
+}
+
+.overlay-text h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    color: #e2e8f0;
+    max-width: 720px;
+}
+
+/* Badge Header */
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 0px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+}
+
+/* Course Highlights List */
+.course-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.course-list li {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.course-list li i {
+    color: #38bdf8;
+    font-size: 16px;
+}
+
+#course-tagline {
+    color: #38bdf8;
+    font-weight: 800;
+}
+
+/* Action Buttons Group */
+.hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    background: #093D85;
+    color: #ffffff;
+}
+
+.hero-btn:hover {
+    background: #011838;
+}
+
+.hero-btn.primary {
+    background: #0a045f;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(7, 1, 109, 0.35);
+}
+
+.hero-btn.primary:hover {
+    background: #01084e;
+    transform: translateY(-2px);
+}
+
+.hero-btn.secondary {
+    background: rgba(1, 1, 103, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.hero-btn.secondary:hover {
+    background: #ffffff;
+    color: #0b0451;
+    transform: translateY(-2px);
+}
+
+/* Slider Navigation Dots & Controls */
+.hero-prev { left: 20px; }
+.hero-next { right: 20px; }
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.hero-dot.active {
+    background: #00A8E8;
+    transform: scale(1.2);
+}
+
+/* SEARCH OVERLAY */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+    background: rgba(9, 25, 55, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.search-overlay.active {
+    display: flex;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .overlay-text {
+        padding-left: 40px;
+        max-width: 100%;
+        width: 100%;
+        left: 0;
+    }
+    .hero-title, .overlay-text h1 {
+        font-size: 40px;
+    }
+    .hero-subtitle, .overlay-text p {
+        font-size: 17px;
+    }
+}

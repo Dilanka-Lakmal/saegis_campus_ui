@@ -1,0 +1,89 @@
+/* --- Base Topbar Styles --- */
+.topbar {
+    background-color: #0b1354; /* Adjust to match your theme color */
+    color: #ffffff;
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topbar-left,
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.topbar-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.topbar-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.phone-text-short {
+    display: none;
+}
+
+.topbar-search input {
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    outline: none;
+}
+
+/* --- Responsive Layout (Tablets & Mobile) --- */
+@media (max-width: 991px) {
+    .phone-text-full {
+        display: none;
+    }
+
+    .phone-text-short {
+        display: inline;
+    }
+
+    .topbar-inner {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .topbar-inner {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .topbar-left,
+    .topbar-right {
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .topbar-search {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .topbar-search input {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -10,7 +10,8 @@
 
             <a href="tel:+94770430000" class="topbar-item">
                 <img src="{{ asset('images/icons/phone.png') }}" alt="Phone Icon" class="topbar-icon">
-                <span>+94 770430000 / +94 117430000</span>
+                <span class="phone-text-full">+94 770430000 / +94 117430000</span>
+                <span class="phone-text-short">+94 770430000</span>
             </a>
         </div>
 
