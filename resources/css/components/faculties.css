@@ -1,7 +1,7 @@
 /* =========================================================
    FACULTIES SECTION 
    ========================================================= */
- 
+
 .saegis-faculties-section {
     --fac-navy: #0A2A5E;
     --fac-blue: #123C86;
@@ -259,3 +259,35 @@
     .faculties-view-all, .faculties-view-all span { transition: none; }
     .faculty-card:hover, .faculty-card:hover .faculty-link i { transform: none; }
 }
+
+
+/* Faculty card images */
+.saegis-faculties-section .faculty-image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.saegis-faculties-section .faculty-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+/* Subtle image zoom on hover */
+.saegis-faculties-section .faculty-card:hover .faculty-image img {
+    transform: scale(1.05);
+}
+
+/* Responsive image height */
+@media (max-width: 576px) {
+    .saegis-faculties-section .faculty-image {
+        height: 160px;
+    }
+}
+
