@@ -1,7 +1,11 @@
-// don't replace below codes - this is work of member 4
+import '../css/app.css';
+import './menu.js';
 
-//    testimonial
+// ==========================================
+// MEMBER 4: TESTIMONIALS & PARTNERS SLIDER
+// ==========================================
 
+// Testimonial Slider
 const testimonialSlides = document.querySelectorAll('.ts-slide');
 const testimonialDotsWrap = document.getElementById('tsDots');
 
@@ -37,25 +41,20 @@ if (testimonialSlides.length && testimonialDotsWrap) {
     if (tsPrevBtn) tsPrevBtn.addEventListener('click', () => goToTestimonial(testimonialCurrent - 1));
 
     const testimonialStage = document.getElementById('tsStage');
-    testimonialStage.addEventListener('mouseenter', () => clearInterval(testimonialTimer));
-    testimonialStage.addEventListener('mouseleave', resetTestimonialTimer);
+    if (testimonialStage) {
+        testimonialStage.addEventListener('mouseenter', () => clearInterval(testimonialTimer));
+        testimonialStage.addEventListener('mouseleave', resetTestimonialTimer);
+    }
 
     resetTestimonialTimer();
 }
 
-// partners & affiliations
-
+// Partners & Affiliations Infinite Scroll
 const paTrack = document.getElementById('paTrack');
 if (paTrack) {
-  Array.from(paTrack.children).forEach(item => {
-    const clone = item.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    paTrack.appendChild(clone);
-  });
+    Array.from(paTrack.children).forEach(item => {
+        const clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        paTrack.appendChild(clone);
+    });
 }
-
-
-
-
-
-

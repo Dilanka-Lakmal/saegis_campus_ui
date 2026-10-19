@@ -115,9 +115,4 @@
 
   </div>
 
-  <!-- Floating WhatsApp button -->
-  <a href="#" class="ft-whatsapp" aria-label="Chat with us on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>Chat with us</span>
-  </a>
 </footer>     
