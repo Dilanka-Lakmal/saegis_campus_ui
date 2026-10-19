@@ -3,10 +3,11 @@
 ========================================== */
 /* Fade out hero text when a navigation menu is open */
 .main-nav:has(.nav-item.open) ~ #heroVideoSection .overlay-text,
-body:has(.nav-item.open) .overlay-text {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+body:has(.nav-item.open) .overlay-text,
+body.mobile-menu-active .overlay-text {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.25s ease, visibility 0.25s ease !important;
 }
 
 /* Ensure smooth transition for hero text */
@@ -42,12 +43,18 @@ body:has(.nav-item.open) .overlay-text {
     object-fit: cover;
 }
 
-/* Gradient Overlay for Better Readability */
+/* Gradient Overlay for Better Text Readability (DARKENED) */
 .hero-slider::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 2;
+    background: linear-gradient(
+        40deg, 
+        rgba(22, 33, 75, 0.85) 0%,   /* Left side darkness (under text) */
+        rgba(21, 40, 86, 0.65) 50%,  /* Middle darkness */
+        rgba(49, 49, 49, 0.45) 70%   /* Right side darkness */
+    );
 }
 
 .hero-slide.active {
@@ -82,7 +89,7 @@ body:has(.nav-item.open) .overlay-text {
     margin-bottom: 20px;
     letter-spacing: -0.02em;
     color: #ffffff;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .overlay-text p {
@@ -91,6 +98,7 @@ body:has(.nav-item.open) .overlay-text {
     margin-bottom: 28px;
     color: #e2e8f0;
     max-width: 720px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Badge Header */
@@ -102,6 +110,10 @@ body:has(.nav-item.open) .overlay-text {
     font-weight: 800;
     letter-spacing: 0.08em;
     margin-bottom: 20px;
+    background: rgba(14, 165, 217, 0.25);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    backdrop-filter: blur(4px);
 }
 
 /* Course Highlights List */
@@ -122,6 +134,7 @@ body:has(.nav-item.open) .overlay-text {
     gap: 12px;
     color: #ffffff;
     margin-bottom: 8px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .course-list li i {
@@ -221,16 +234,21 @@ body:has(.nav-item.open) .overlay-text {
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
+    .hero-slider::before {
+        /* Slightly stronger overlay on mobile screens */
+        background: rgba(5, 12, 40, 0.75);
+    }
     .overlay-text {
-        padding-left: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
         max-width: 100%;
         width: 100%;
         left: 0;
     }
     .hero-title, .overlay-text h1 {
-        font-size: 40px;
+        font-size: 34px;
     }
     .hero-subtitle, .overlay-text p {
-        font-size: 17px;
+        font-size: 16px;
     }
 }

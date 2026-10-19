@@ -5,7 +5,7 @@ const menuData = {
             {
                 heading: "Programmes",
                 links: [
-                    { label: "All Programmes", url: "#all-programmes" },
+                    
                     { label: "Certificate", url: "#certificate" },
                     { label: "Foundation", url: "#foundation" },
                     { label: "Undergraduate", url: "#diploma" },
@@ -48,10 +48,7 @@ const menuData = {
             { heading: "Saegis", links: [{ label: "Overview", url: "#about-saegis" }, { label: "Vision & Mission", url: "#vision-mission" }] },
             { heading: "Leadership", links: [{ label: "Top Management", url: "#top-management" }, { label: "Governing Council", url: "#governing-council" }] },
             { heading: "Academic Community", links: [{ label: "Key Academics", url: "#key-academics" }, { label: "Visiting Lecturers", url: "#visiting-lecturers" }] }
-        ],
-        feature: {
-            // label: "Discover Saegis", title: "Learn about Saegis", text: "Discover our institution, leadership, mission and academic community.", button: "Explore Saegis", url: "#about-saegis" 
-        }
+        ]
     },
     campus: {
         label: "CAMPUS",
@@ -59,10 +56,7 @@ const menuData = {
             { heading: "Life at Saegis", links: [{ label: "Life at Saegis", url: "#life" }, { label: "Clubs & Societies", url: "#clubs" }, { label: "Student Forum", url: "#forum" }] },
             { heading: "Student Support", links: [{ label: "Career Guidance", url: "#career-guidance" }, { label: "Student Services", url: "#student-services" }] },
             { heading: "Global Opportunities", links: [{ label: "Study Abroad", url: "#study-abroad" }, { label: "International Opportunities", url: "#international" }] }
-        ],
-        feature: { 
-            // label: "Student Experience", title: "Life beyond the classroom", text: "Discover student activities, support and opportunities.", button: "Explore Campus", url: "#campus" 
-        }
+        ]
     },
     research: {
         label: "RESEARCH",
@@ -70,10 +64,7 @@ const menuData = {
             { heading: "Research", links: [{ label: "SIRC", url: "#sirc" }, { label: "SURS", url: "#surs" }] },
             { heading: "Knowledge", links: [{ label: "Journals", url: "#journals" }, { label: "Publications", url: "#publications" }, { label: "Conferences", url: "#conferences" }] },
             { heading: "Research Community", links: [{ label: "Research Areas", url: "#research-areas" }, { label: "Researchers", url: "#researchers" }] }
-        ],
-        feature: { 
-            // label: "Discover", title: "Research at Saegis", text: "Explore research, publications and academic initiatives.", button: "Explore Research", url: "#research"
-         }
+        ]
     },
     resources: {
         label: "RESOURCES",
@@ -81,10 +72,7 @@ const menuData = {
             { heading: "Information", links: [{ label: "News & Events", url: "#news-events" }, { label: "FAQs", url: "#faqs" }, { label: "Downloads", url: "#downloads" }] },
             { heading: "Academic", links: [{ label: "Academic Calendar", url: "#calendar" }, { label: "Library", url: "#library" }] },
             { heading: "Students", links: [{ label: "Student Resources", url: "#student-resources" }, { label: "Student Portal", url: "#student-portal" }] }
-        ],
-        feature: { 
-           // label: "Quick Access", title: "Useful resources", text: "Find important information, academic resources and student services.", button: "View Resources", url: "#resources"
-         }
+        ]
     }
 };
 
@@ -95,49 +83,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!desktopNav) return;
 
-    // ==========================================
     // 1. POPULATE DESKTOP NAV
-    // ==========================================
     Object.entries(menuData).forEach(([key, menu]) => {
-    const li = document.createElement("li");
-    li.className = "nav-item";
-    
-    // Check if feature exists before calling or fallback to empty string
-    const featureHtml = menu.feature ? createFeature(menu.feature) : "";
+        const li = document.createElement("li");
+        li.className = "nav-item";
+        
+        const featureHtml = menu.feature ? createFeature(menu.feature) : "";
 
-    li.innerHTML = `
-        <button class="nav-button" aria-expanded="false">
-            ${menu.label}
-            <span class="arrow">▾</span>
-        </button>
-        <div class="mega-menu">
-            <div class="mega-inner">
-                <div class="mega-grid">
-                    ${createColumns(menu.columns)}
-                    ${featureHtml || ''}
+        li.innerHTML = `
+            <button class="nav-button" aria-expanded="false">
+                ${menu.label}
+                <span class="arrow">▾</span>
+            </button>
+            <div class="mega-menu">
+                <div class="mega-inner">
+                    <div class="mega-grid">
+                        ${createColumns(menu.columns)}
+                        ${featureHtml}
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
-    desktopNav.appendChild(li);
-});
+        `;
+        desktopNav.appendChild(li);
+    });
 
-    // Add Desktop Contact Link
+    // Add Desktop Contact & Apply Buttons
     const contactLi = document.createElement("li");
     contactLi.innerHTML = `<a href="#contact" class="contact-link">CONTACT</a>`;
     desktopNav.appendChild(contactLi);
 
-    // Add Desktop Apply Button
     const applyLi = document.createElement("li");
     applyLi.innerHTML = `<a href="#" class="apply-button" data-bs-toggle="modal" data-bs-target="#registerModal">APPLY NOW</a>`;
     desktopNav.appendChild(applyLi);
 
-    // ==========================================
-    // 2. POPULATE VERTICAL MOBILE NAV
-    // ==========================================
+    // 2. POPULATE VERTICAL MOBILE NAV (INCLUDES FEATURE CARDS)
     if (mobileNav) {
         let mobileHtml = `<ul class="mobile-menu-list">`;
         Object.entries(menuData).forEach(([key, menu]) => {
+            const mobileFeatureHtml = menu.feature ? `<div class="mobile-feature-wrapper">${createFeature(menu.feature)}</div>` : "";
+
             mobileHtml += `
                 <li class="mobile-item">
                     <button class="mobile-item-btn" type="button">
@@ -146,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </button>
                     <div class="mobile-dropdown">
                         ${createMobileVerticalColumns(menu.columns)}
+                        ${mobileFeatureHtml}
                     </div>
                 </li>
             `;
@@ -161,9 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileNav.innerHTML = mobileHtml;
     }
 
-    // ==========================================
     // 3. DESKTOP DROPDOWN INTERACTIONS
-    // ==========================================
     const navItems = desktopNav.querySelectorAll(".nav-item");
     navItems.forEach(item => {
         const button = item.querySelector(".nav-button");
@@ -178,21 +161,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("click", () => navItems.forEach(i => i.classList.remove("open")));
 
-    // ==========================================
     // 4. MOBILE HAMBURGER TOGGLE
-    // ==========================================
     if (mobileToggle && mobileNav) {
         mobileToggle.addEventListener("click", function (e) {
             e.stopPropagation();
             const isOpen = mobileNav.classList.toggle("open");
             mobileToggle.classList.toggle("active");
             mobileToggle.setAttribute("aria-expanded", isOpen);
+            
+            // Toggle body class so hero text hides cleanly on mobile
+            document.body.classList.toggle("mobile-menu-active", isOpen);
         });
     }
 
-    // ==========================================
-    // 5. MOBILE ACCORDION (VERTICAL TOGGLE)
-    // ==========================================
+    // 5. MOBILE ACCORDION
     const mobileBtns = document.querySelectorAll(".mobile-item-btn");
     mobileBtns.forEach(btn => {
         btn.addEventListener("click", function () {
@@ -202,9 +184,15 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isOpen) parent.classList.add("open");
         });
     });
+
+    // 6. QUALIFICATION BUTTON SELECTION TOGGLE
+    document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".qualification-btn");
+        if (!btn) return;
+        btn.classList.toggle("active");
+    });
 });
 
-// Helper for Desktop Mega Menu Columns
 function createColumns(columns) {
     return columns.map(col => `
         <div class="mega-column">
@@ -216,7 +204,6 @@ function createColumns(columns) {
     `).join("");
 }
 
-// Helper for Mobile Vertical Sub-Links
 function createMobileVerticalColumns(columns) {
     return columns.map(col => `
         <div class="mobile-vertical-group">
@@ -228,14 +215,11 @@ function createMobileVerticalColumns(columns) {
     `).join("");
 }
 
-// Helper for Feature Panels & Eligibility Finder
 function createFeature(feature) {
-    // Return empty string if feature is missing or has no valid properties
     if (!feature || typeof feature !== "object" || Object.keys(feature).length === 0) {
         return "";
     }
 
-    // Eligibility Finder Card
     if (feature.type === "eligibilityFinder") {
         return `
             <div class="mega-column programme-finder-column">
@@ -268,7 +252,6 @@ function createFeature(feature) {
         `;
     }
 
-    // Standard Feature Card (only if title exists)
     if (feature.title) {
         return `
             <div class="mega-column">
