@@ -43,17 +43,18 @@ body.mobile-menu-active .overlay-text {
     object-fit: cover;
 }
 
-/* Gradient Overlay for Better Text Readability (DARKENED) */
+/* Gradient Overlay for Better Text Readability */
 .hero-slider::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 2;
+    /* Adjust these RGBA opacity values to make the video darker or lighter */
     background: linear-gradient(
-        40deg, 
-        rgba(22, 33, 75, 0.85) 0%,   /* Left side darkness (under text) */
-        rgba(21, 40, 86, 0.65) 50%,  /* Middle darkness */
-        rgba(49, 49, 49, 0.45) 70%   /* Right side darkness */
+        30deg, 
+        rgba(5, 12, 40, 0.85) 0%,   /* Left side darkness (under text) */
+        rgba(8, 24, 60, 0.65) 50%,  /* Middle darkness */
+        rgba(0, 0, 0, 0.45) 100%    /* Right side darkness */
     );
 }
 
