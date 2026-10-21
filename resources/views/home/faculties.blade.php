@@ -25,7 +25,7 @@
         </div>
 
         <div class="faculty-image">
-            <img src="../../../public/images/department/management.jpg"
+            <img src="images/department/management.jpg"
                  alt="Faculty of Management, Humanities and Social Sciences">
         </div>
 
@@ -48,7 +48,7 @@
         </div>
 
         <div class="faculty-image">
-            <img src="../../../public/images/departmentcomputing.jpg"
+            <img src="images/department/computing.jpg"
                  alt="Faculty of Computing and Technology">
         </div>
 
@@ -71,7 +71,7 @@
         </div>
 
         <div class="faculty-image">
-            <img src="../../../public/images/departmentpostgraduate.jpg"
+            <img src="images/department/postgraduate.jpg"
                  alt="Faculty of Postgraduate Studies">
         </div>
 
@@ -94,7 +94,7 @@
         </div>
 
         <div class="faculty-image">
-            <img src="../../../public/images/departmentinternational.jpg"
+            <img src="images/department/international.jpg"
                  alt="International study programmes">
         </div>
 
