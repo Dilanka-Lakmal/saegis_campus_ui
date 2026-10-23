@@ -186,181 +186,22 @@
 
 
 /* =============================================================
-   COURSE CATEGORIES SLIDER
+   COURSE CATEGORIES: dark reveal tile design
    Every rule is scoped under .course-categories so the generic
-   names (.card, .btn, .facts) cannot clash with other members'
-   sections.
+   names (.card, .btn, .facts) cannot clash with other sections.
 ============================================================= */
+
+
 .course-categories {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 40px 44px;
-}
-
-.course-categories .level-slider {
-    position: relative;
-}
-
-.course-categories .level-track {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 4px 4px 12px;
-    scrollbar-width: none;
-}
-
-.course-categories .level-track::-webkit-scrollbar {
-    display: none;
-}
-
-.course-categories .level-track .card {
-    flex: 0 0 260px;
-    scroll-snap-align: start;
-}
-
-.course-categories .level-slider-btn {
-    position: absolute;
-    top: calc(50% - 12px);
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--line);
-    background: var(--royal);
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(9, 61, 133, .14);
-    z-index: 2;
-    transition: background .15s ease;
-}
-
-.course-categories .level-slider-btn:hover { background: var(--sky); }
-.course-categories .level-slider-btn.prev { left: -20px; }
-.course-categories .level-slider-btn.next { right: -20px; }
-
-.course-categories .card {
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    overflow: hidden;
-    background: var(--paper);
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow .18s ease, transform .18s ease;
-}
-
-.course-categories .card:hover {
-    box-shadow: 0 16px 32px rgba(9, 61, 133, 0.12);
-    transform: translateY(-3px);
-}
-
-.course-categories .card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    display: block;
-    background: var(--bg-soft);
-}
-
-.course-categories .card-body {
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.course-categories .card-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--navy);
-    margin: 0 0 10px;
-}
-
-.course-categories .facts {
-    list-style: none;
-    margin: 0 0 16px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    flex: 1;
-}
-
-.course-categories .facts li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--gray);
-}
-
-.course-categories .facts li i {
-    color: var(--sky);
-    font-size: 11px;
-    width: 14px;
-}
-
-.course-categories .facts li.intake {
-    color: var(--navy);
-    font-weight: 600;
-}
-
-.course-categories .facts li.intake i {
-    color: var(--coral);
-}
-
-.course-categories .card-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.course-categories .btn {
-    flex: 1;
-    text-align: center;
-    padding: 10px 12px;
-    border-radius: 999px;
-    font-size: 12.5px;
-    font-weight: 700;
-    text-decoration: none;
-    border: 1.5px solid transparent;
-    cursor: pointer;
-    font-family: inherit;
-}
-
-.course-categories .btn-outline {
-    border-color: var(--royal);
-    color: var(--royal);
-    background: transparent;
-}
-
-.course-categories .btn-outline:hover {
-    background: var(--royal);
-    color: #fff;
-}
-
-.course-categories .btn-solid {
-    background: var(--coral);
-    color: #fff;
-}
-
-.course-categories .btn-solid:hover {
-    background: #4169E1;
-}
-
-@media (max-width: 640px) {
-    .course-categories { padding: 30px 16px; }
-    .course-categories .level-slider-btn { display: none; }
-    .course-categories .level-track .card { flex-basis: 78vw; }
+    background: #093D85;                 /* dark blue section */
+    box-shadow: 0 0 0 100vmax #093D85;   /* same colour, full page width */
+    clip-path: inset(0 -100vmax);
+    padding: 50px 24px;
+    margin: 50px auto 60px;   /* 50px white space above, 60px below */
 }
 
 
-
-
+/* ----- heading ----- */
 .course-heading {
     text-align: center;
     margin-bottom: 12px;
@@ -379,7 +220,7 @@
     margin: 0;
     font-size: 32px;
     font-weight: 800;
-    color: var(--navy);
+    color: #ffffff;
     line-height: 1.2;
 }
 
@@ -390,20 +231,209 @@
 .course-heading p {
     max-width: 650px;
     margin: 14px auto 0;
-    color: var(--gray);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 15px;
     line-height: 1.8;
 }
 
+/* ----- slider track ----- */
+.course-categories .level-slider {
+    position: relative;
+}
+
+.course-categories .level-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 6px 4px 12px;
+    scrollbar-width: none;
+}
+
+.course-categories .level-track::-webkit-scrollbar {
+    display: none;
+}
+
+.course-categories .level-track .card {
+    flex: 0 0 calc((100% - 60px) / 4);   /* 4 cards fit exactly */
+    scroll-snap-align: start;
+}
+
+
+/* ----- card ----- */
+.course-categories .card {
+    position: relative;
+    height: 300px;
+    background: #0b1f44;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.course-categories .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(9, 61, 133, 0.18);
+}
+
+/* photo: hidden until hover */
+.course-categories .card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.course-categories .card:hover img {
+    opacity: .45;
+}
+
+/* arrow button, top right */
+.course-categories .card::after {
+    content: "\2197\FE0E";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sky);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+/* text area, bottom */
+.course-categories .card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px;
+    z-index: 1;
+}
+
+.course-categories .card-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 10px;
+}
+
+.course-categories .card-title::before {
+    content: "COURSE LEVEL";
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    color: var(--sky);
+    margin-bottom: 6px;
+}
+
+.course-categories .facts {
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.course-categories .facts li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.course-categories .facts li.intake {
+    font-weight: 600;
+}
+
+.course-categories .facts li i {
+    color: var(--sky);
+    font-size: 11px;
+    width: 14px;
+}
+
+/* ----- buttons ----- */
+.course-categories .card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.course-categories .btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s ease, color .15s ease;
+}
+
+.course-categories .btn-outline {
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.course-categories .btn-outline:hover {
+    background: #fff;
+    color: var(--navy);
+}
+
+.course-categories .btn-solid {
+    background: var(--sky);
+    color: #fff;
+}
+
+.course-categories .btn-solid:hover {
+    background: #fff;
+    color: var(--navy);
+}
+
+/* ----- phones ----- */
+@media (max-width: 640px) {
+    .course-categories { padding: 24px 16px 16px; }
+    .course-categories .level-track .card { flex-basis: 78vw; }
+}
+
+/* touch screens have no hover, so keep the photo visible */
+@media (hover: none) {
+    .course-categories .card img { opacity: .35; }
+}
+
+/* ----- intro section spacing override (kept from before) ----- */
 .as-section {
-    max-width: 1180px;
-    margin: 0 auto;
     padding: 25px 24px 10px;
 }
 
-.course-categories {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding:30px 44px 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
