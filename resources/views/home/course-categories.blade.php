@@ -7,7 +7,7 @@
   </div>
 
   <div class="level-slider">
-    <button class="level-slider-btn prev" id="levelPrev" aria-label="Previous courses">&#10094;</button>
+    
 
     <div class="level-track" id="levelTrack">
 
@@ -133,16 +133,18 @@
 
     </div>
 
-    <button class="level-slider-btn next" id="levelNext" aria-label="Next courses">&#10095;</button>
+    
   </div>
 </section>
+
+
+
+
 
 <script>
   (function () {
     var track = document.getElementById('levelTrack');
-    var prev = document.getElementById('levelPrev');
-    var next = document.getElementById('levelNext');
-    if (!track || !prev || !next) return;
+    if (!track) return;
 
     var DELAY = 2500; // time between slides (ms)
 
@@ -154,35 +156,28 @@
       track.appendChild(clone);
     });
 
-    // Snap would fight the instant jump, so turn it off
     track.style.scrollSnapType = 'none';
 
     var cards = track.querySelectorAll('.card');
-    var step = cards[1].offsetLeft - cards[0].offsetLeft;        // card width + gap
+    var step = cards[1].offsetLeft - cards[0].offsetLeft;
     var loopWidth = cards[originals.length].offsetLeft - cards[0].offsetLeft;
 
-    function jumpTo(x) {
-      track.scrollTo({ left: x, behavior: 'instant' });
-    }
-
     function goNext() {
-      if (track.scrollLeft >= loopWidth - 2) jumpTo(track.scrollLeft - loopWidth);
+      if (track.scrollLeft >= loopWidth - 2) {
+        track.scrollTo({ left: track.scrollLeft - loopWidth, behavior: 'instant' });
+      }
       track.scrollBy({ left: step, behavior: 'smooth' });
-    }
-
-    function goPrev() {
-      if (track.scrollLeft <= 2) jumpTo(track.scrollLeft + loopWidth);
-      track.scrollBy({ left: -step, behavior: 'smooth' });
     }
 
     var timer = setInterval(goNext, DELAY);
 
-    function restart() {
-      clearInterval(timer);
-      timer = setInterval(goNext, DELAY);
-    }
-
-    next.addEventListener('click', function () { goNext(); restart(); });
-    prev.addEventListener('click', function () { goPrev(); restart(); });
+    // Pause while the mouse is over the cards so the photo hover can be seen
+    track.addEventListener('mouseenter', function () { clearInterval(timer); });
+    track.addEventListener('mouseleave', function () { timer = setInterval(goNext, DELAY); });
   })();
 </script>
+
+
+
+
+
