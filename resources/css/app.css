@@ -17,3 +17,6 @@
 @import './components/topbar.css';
 @import './components/menu.css';
 @import './components/hero2.css';
+
+@import './components/faculty.css';
+@import './components/department.css';

@@ -1,23 +1,27 @@
-const departmentsSwiper = new Swiper(".saegis_home_departments", {
-    slidesPerView: 1,
-    spaceBetween: 24,
+const departmentsSliderEl = document.querySelector(".saegis_home_departments");
 
-    loop: false,
+if (typeof Swiper !== "undefined" && departmentsSliderEl) {
+    const departmentsSwiper = new Swiper(".saegis_home_departments", {
+        slidesPerView: 1,
+        spaceBetween: 24,
 
-    pagination: {
-        el: ".faculty-pagination",
-        clickable: true
-    },
+        loop: false,
 
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 24
+        pagination: {
+            el: ".faculty-pagination",
+            clickable: true
         },
 
-        1100: {
-            slidesPerView: 3,
-            spaceBetween: 30
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24
+            },
+
+            1100: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
         }
-    }
-});
+    });
+}

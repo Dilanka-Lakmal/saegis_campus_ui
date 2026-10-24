@@ -32,7 +32,7 @@
         <h3>Faculty of Management, Humanities &amp; Social Sciences</h3>
         <p>Empowering tomorrow's leaders - Learn to lead, inspire, and achieve with us!</p>
 
-        <a href="faculty-of-management.html" class="faculty-link">
+        <a href="{{ route('faculty.management') }}" class="faculty-link">
             <span>View faculty<span class="visually-hidden"> – Faculty of Management, Humanities &amp; Social Sciences</span></span>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
@@ -55,7 +55,7 @@
         <h3>Faculty of Computing &amp; Technology</h3>
         <p>Experience the future of innovation - Where technology meets creativity, and possibilities are endless!</p>
 
-        <a href="faculty-of-computing.html" class="faculty-link">
+        <a href="{{ route('faculty.computing') }}" class="faculty-link">
             <span>View faculty<span class="visually-hidden"> – Faculty of Computing &amp; Technology</span></span>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
