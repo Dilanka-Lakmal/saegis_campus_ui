@@ -17,8 +17,8 @@ const menuData = {
             {
                 heading: "Faculties",
                 links: [
-                    { label: "Management, Humanities & Social Sciences", url: "#management-humanities" },
-                    { label: "Computing & Technology", url: "#computing-technology" },
+                    { label: "Management, Humanities & Social Sciences", url: "/faculty-of-management" },
+                    { label: "Computing & Technology", url: "/faculty-of-computing" },
                     { label: "Faculty of Graduate Studies", url: "#graduate-studies" },
                     { label: "International Programmes", url: "#international-programmes" }
                 ]
@@ -26,10 +26,10 @@ const menuData = {
             {
                 heading: "Study Areas",
                 links: [
-                    { label: "Business & Management", url: "#business" },
+                    { label: "Business & Management", url: "/department-of-management" },
                     { label: "Accounting & Finance", url: "#accounting" },
-                    { label: "Computing & IT", url: "#computing" },
-                    { label: "English & Languages", url: "#english" },
+                    { label: "Computing & IT", url: "/department-of-computing" },
+                    { label: "English & Languages", url: "/department-of-languages" },
                     { label: "Tourism & Hospitality", url: "#tourism" },
                     { label: "Applied Science", url: "#science" }
                 ]
