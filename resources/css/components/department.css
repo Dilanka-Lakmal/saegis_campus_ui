@@ -1,1 +1,224 @@
-/* Department page styles (Member 3 / 4) */
+/* ==========================================================================
+   DEPARTMENT PAGE STYLES (SAEGIS BRANDED)
+   ========================================================================== */
+
+/* Section Spacing */
+.dept-section-spacing {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+/* Dual-Tone Main Headings (No Underlines) */
+.dept-main-title,
+.dept-dual-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #093D85; /* Saegis Deep Navy */
+    text-decoration: none !important;
+    border: none !important;
+}
+
+/* Category Sub-Headings (No Underlines) */
+.category-heading {
+    font-size: 25px;
+    font-weight: 800;
+    color: #093D85;
+    margin-bottom: 4px;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+/* ==========================================================================
+   FIXED FULLY DISPLAYED STICKY SUB-NAVIGATOR
+   ========================================================================== */
+
+.dept-sticky-nav {
+    position: sticky;
+    top: 130px; /* Positioned below fixed website topbar & header */
+    z-index: 990;
+    background: #093D85; /* Deep Navy */
+    border-radius: 12px;
+    margin: 15px 0 35px 0;
+    padding: 14px 24px;
+    box-shadow: 0 10px 30px rgba(9, 61, 133, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dept-nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dept-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+}
+
+/* Navigation Links */
+.dept-nav-item {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none !important;
+    white-space: nowrap;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.dept-nav-item:hover,
+.dept-nav-item.active {
+    color: #38bdf8; /* Light Cyan Active */
+}
+
+.dept-nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #38bdf8;
+    border-radius: 2px;
+}
+
+/* CTA Action Buttons */
+.dept-nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dept-btn-enquire {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 9px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.dept-btn-enquire:hover {
+    background: #ffffff;
+    color: #093D85 !important;
+}
+
+.dept-btn-apply {
+    background: #00A8E8; /* Saegis Cyan */
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 9px 22px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.dept-btn-apply:hover {
+    background: #0284c7;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PROGRAM CARDS, FULL-WIDTH GRAY LINES & EQUAL BOTTOM BUTTON ALIGNMENT
+   ========================================================================== */
+
+/* Card Elevation & Structure */
+.common_box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+    min-height: 100%;
+}
+
+.common_box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(9, 61, 133, 0.12) !important;
+}
+
+/* Image Container */
+.card-img-box {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.card-img-box img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.common_box:hover .card-img-box img {
+    transform: scale(1.05);
+}
+
+/* Full-Width Gray/Black Separator Line Near Edges */
+.card-full-line {
+    width: 100%;
+    height: 1px;
+    background-color: #cbd5e1; /* Gray-black subtle line */
+    border: none;
+    margin: 8px 0 14px 0;
+}
+
+/* Site Navy Button (Hover Cyan Blue) */
+.site_btn_navy {
+    background: #093D85; /* Saegis Navy */
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.site_btn_navy:hover {
+    background: #00A8E8; /* Saegis Cyan Hover */
+}
+
+.btn_circle_white {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #093D85;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Spacing Adjustments */
+.margin_bottom_40 {
+    margin-bottom: 40px;
+}
+
+.margin_bottom_90 {
+    margin-bottom: 90px; /* Increased gap between program categories */
+}
+
+/* Responsive Rules for Small Screens */
+@media (max-width: 991px) {
+    .dept-sticky-nav {
+        top: 70px;
+        padding: 10px 16px;
+    }
+    .dept-nav-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .dept-nav-links {
+        justify-content: flex-start;
+    }
+    .dept-nav-cta {
+        justify-content: flex-end;
+    }
+}
