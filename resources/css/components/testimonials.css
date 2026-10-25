@@ -27,7 +27,6 @@
   opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease;pointer-events:none;}
 .ts-slide.active{opacity:1;transform:translateY(0);pointer-events:auto;position:relative;}
 
-.ts-quote-icon{color:var(--sky);opacity:.4;font-size:34px;margin-bottom:18px;}
 .ts-quote-text{font-family:'Merriweather',serif;font-style:italic;font-size:19px;line-height:1.75;color:var(--ink);
   max-width:640px;margin:0 0 28px;}
 
