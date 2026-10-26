@@ -41,3 +41,28 @@
         background: rgba(1, 24, 80, 0.78);
     }
 }
+
+.inner_banner_bread_crumbs .banner-text {
+    max-width: 52%;
+}
+
+.inner_banner_bread_crumbs .banner-subtitle {
+    margin: 8px 0 24px;
+    color: #38bdf8;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+}
+
+.inner_banner_bread_crumbs .banner-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 991px) {
+    .inner_banner_bread_crumbs .banner-text {
+        max-width: 100%;
+    }
+}
