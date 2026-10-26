@@ -6,7 +6,8 @@
     <section class="faculty-page">
 
 
-      <section class="management-section" id="departments">
+<!-- Departments Section -->
+<section class="management-section" id="departments">
   <div class="management-container">
 
     <div class="section-heading">
