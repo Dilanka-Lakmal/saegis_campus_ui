@@ -1,8 +1,5 @@
 /* Faculty page styles (Member 2) */
 
-
-
-
 :root {
   --faculty-primary: #142b55;
   --faculty-blue: #087fc4;
@@ -20,10 +17,18 @@
 /* ---------- General ---------- */
 
 .computing-section,
-.management-section {
+.management-section,
+.staff-section {
+  box-sizing: border-box;
   padding: 80px 24px;
   color: var(--faculty-text);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.computing-section *,
+.management-section *,
+.staff-section * {
+  box-sizing: border-box;
 }
 
 .computing-container,
@@ -33,15 +38,25 @@
   margin: 0 auto;
 }
 
-.computing-section *,
-.management-section * {
-  box-sizing: border-box;
-}
-
 .computing-section img,
-.management-section img {
+.management-section img,
+.staff-section img {
   display: block;
   max-width: 100%;
+}
+
+/* ---------- Faculty Section Backgrounds ---------- */
+
+.computing-section {
+  background: var(--faculty-background);
+}
+
+.management-section {
+  background: var(--faculty-white);
+}
+
+.staff-section {
+  background: var(--faculty-background);
 }
 
 /* ---------- Section Headings ---------- */
@@ -71,11 +86,16 @@
 }
 
 .section-heading p {
+  max-width: 700px;
   margin: 0 auto;
   color: var(--faculty-muted);
   font-size: 1rem;
   line-height: 1.8;
 }
+
+/* =========================================================
+   DEPARTMENT CARDS
+========================================================= */
 
 /* ---------- Department Grid ---------- */
 
@@ -83,14 +103,17 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* ---------- Department Cards ---------- */
+/* ---------- Department Card ---------- */
 
 .department-card {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
   overflow: hidden;
   background: var(--faculty-white);
   border: 1px solid var(--faculty-border);
@@ -111,63 +134,32 @@
 /* ---------- Department Images ---------- */
 
 .department-image {
-  position: relative;
-  min-height: 245px;
+  width: 100%;
+  height: 260px;
   overflow: hidden;
-  background-color: #dce9f5;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: background-size 0.3s ease;
+  background: #dce9f5;
 }
 
-/* Computing Faculty department images */
-
-.software-image {
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(10, 28, 57, 0.35),
-      rgba(10, 28, 57, 0.02)
-    ),
-    url("images/department-of-computing.jpg");
+.department-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
 }
 
-.computing-image {
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(10, 28, 57, 0.35),
-      rgba(10, 28, 57, 0.02)
-    ),
-    url("images/faculty/computing/hero/department-of-technology.png");
+.department-card:hover .department-image img {
+  transform: scale(1.05);
 }
 
-/* Management Faculty department images */
-
-.management-image {
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(10, 28, 57, 0.35),
-      rgba(10, 28, 57, 0.02)
-    ),
-    url("images/faculty/management/hero/department-of-management.jpg");
-}
-
-.languages-image {
-  background-image:
-    linear-gradient(
-      to top,
-      rgba(10, 28, 57, 0.35),
-      rgba(10, 28, 57, 0.02)
-    ),
-    url("images/faculty/management/hero/department-of-language.jpg");
-}
-
-/* ---------- Department Card Content ---------- */
+/* ---------- Department Content ---------- */
 
 .department-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 28px;
 }
 
@@ -185,6 +177,7 @@
   color: var(--faculty-primary);
   font-size: 1.35rem;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .department-body p {
@@ -200,6 +193,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-top: auto;
   color: var(--faculty-blue);
   font-size: 0.92rem;
   font-weight: 700;
@@ -226,11 +220,11 @@
   border-radius: 3px;
 }
 
-/* ---------- Staff Section ---------- */
+/* =========================================================
+   STAFF CARDS
+========================================================= */
 
-.staff-section {
-  background: var(--faculty-background);
-}
+/* ---------- Staff Section Heading ---------- */
 
 .staff-section .section-heading {
   margin-bottom: 45px;
@@ -243,9 +237,10 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   align-items: stretch;
+  width: 100%;
 }
 
-/* ---------- Staff Cards ---------- */
+/* ---------- Staff Card ---------- */
 
 .staff-card {
   min-width: 0;
@@ -276,6 +271,7 @@
 }
 
 .staff-photo {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -322,6 +318,7 @@
   font-size: 0.92rem;
   font-weight: 700;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .staff-qualifications {
@@ -332,23 +329,17 @@
   overflow-wrap: anywhere;
 }
 
-/* ---------- No Search Results ---------- */
 
-.no-results {
-  margin: 30px 0 0;
-  padding: 20px;
-  color: var(--faculty-muted);
-  background: var(--faculty-white);
-  border: 1px solid var(--faculty-border);
-  border-radius: 12px;
-  text-align: center;
-}
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
 
 /* ---------- Tablet ---------- */
 
 @media (max-width: 900px) {
   .computing-section,
-  .management-section {
+  .management-section,
+  .staff-section {
     padding: 65px 22px;
   }
 
@@ -362,7 +353,7 @@
   }
 
   .department-image {
-    min-height: 220px;
+    height: 230px;
   }
 
   .staff-photo-wrap {
@@ -374,7 +365,8 @@
 
 @media (max-width: 600px) {
   .computing-section,
-  .management-section {
+  .management-section,
+  .staff-section {
     padding: 48px 16px;
   }
 
@@ -397,7 +389,7 @@
   }
 
   .department-image {
-    min-height: 215px;
+    height: 230px;
   }
 
   .department-body {
@@ -416,6 +408,10 @@
 /* ---------- Small Mobile ---------- */
 
 @media (max-width: 380px) {
+  .department-image {
+    height: 200px;
+  }
+
   .staff-photo-wrap {
     height: 260px;
   }
@@ -426,11 +422,14 @@
   }
 }
 
-/* ---------- Reduced Motion Accessibility ---------- */
+/* =========================================================
+   ACCESSIBILITY: REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .department-card,
   .staff-card,
+  .department-image img,
   .staff-photo,
   .text-link span {
     transition: none;
@@ -438,6 +437,7 @@
 
   .department-card:hover,
   .staff-card:hover,
+  .department-card:hover .department-image img,
   .staff-card:hover .staff-photo {
     transform: none;
   }
