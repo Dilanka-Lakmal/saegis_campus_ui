@@ -3,73 +3,53 @@
 
 
 
-
 :root {
-  --faculty-navy: var(--primary-navy, #0A2A5E);
-  --faculty-dark: var(--primary-dark, #0b1354);
-  --faculty-blue: var(--sky-blue, #0EA5D9);
-  --faculty-light-blue: #38bdf8;
-
-  --faculty-font: var(--font-primary, "Inter", "Segoe UI", Arial, sans-serif);
-  --faculty-text: var(--text-primary, #0b1354);
-  --faculty-muted: var(--text-secondary, #64748b);
-  --faculty-background: var(--background-secondary, #f5f9ff);
-  --faculty-border: var(--border-color, #e2e8f0);
-  --faculty-radius: var(--card-radius, 18px);
-  --faculty-shadow: var(--card-shadow, 0 10px 30px rgba(11, 19, 84, 0.08));
+  --faculty-primary: #142b55;
+  --faculty-blue: #087fc4;
+  --faculty-blue-light: #eaf6ff;
+  --faculty-text: #263449;
+  --faculty-muted: #64748b;
+  --faculty-white: #ffffff;
+  --faculty-border: #e2e8f0;
+  --faculty-background: #f7faff;
+  --faculty-radius: 16px;
+  --faculty-shadow: 0 8px 25px rgba(20, 43, 85, 0.08);
+  --faculty-shadow-hover: 0 16px 35px rgba(8, 127, 196, 0.16);
 }
 
-/* Reset and base styles */
+/* ---------- General ---------- */
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: var(--faculty-font);
+.computing-section,
+.management-section {
+  padding: 80px 24px;
   color: var(--faculty-text);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.management-container,
-.computing-container {
-  width: min(calc(100% - 36px), 1120px);
-  margin-inline: auto;
+.computing-container,
+.management-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-[hidden] {
-  display: none !important;
+.computing-section *,
+.management-section * {
+  box-sizing: border-box;
 }
 
-/* =========================================
-   HERO SECTIONS
-   ========================================= */
-
-.management-hero,
-.computing-hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 390px;
-  overflow: hidden;
-  color: #ffffff;
-  background-color: var(--faculty-navy);
+.computing-section img,
+.management-section img {
+  display: block;
+  max-width: 100%;
 }
 
-.management-hero {
-  background:
-    linear-gradient(110deg, rgba(10, 42, 94, 0.96), rgba(11, 19, 84, 0.76)),
-    url("images/management-hero.jpg") center / cover no-repeat;
-}
+/* ---------- Section Headings ---------- */
 
-.computing-hero {
-  background:
-    linear-gradient(110deg, rgba(10, 42, 94, 0.96), rgba(11, 19, 84, 0.76)),
-    url("images/computing-hero.jpg") center / cover no-repeat;
-}
-
-.hero-content {
-  padding-block: 76px;
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
 }
 
 .section-label {
@@ -78,380 +58,311 @@ body {
   color: var(--faculty-blue);
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.management-hero .section-label,
-.computing-hero .section-label {
-  color: #7dd3fc;
-}
-
-.management-hero h1,
-.computing-hero h1 {
-  max-width: 780px;
-  margin: 0 0 18px;
-  font-size: clamp(2.1rem, 5vw, 3.6rem);
-  line-height: 1.12;
-  letter-spacing: -0.035em;
-}
-
-.management-hero p,
-.computing-hero p {
-  max-width: 650px;
-  margin: 0 0 28px;
-  color: #e2e8f0;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.primary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 22px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: var(--faculty-blue);
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 180ms ease, background 180ms ease;
-}
-
-.primary-button:hover {
-  background: #0284c7;
-  transform: translateY(-2px);
-}
-
-/* =========================================
-   SECTIONS AND HEADINGS
-   ========================================= */
-
-.management-section,
-.computing-section {
-  padding: 76px 0;
-}
-
-.staff-section {
-  background: var(--faculty-background);
-}
-
-.section-heading {
-  max-width: 700px;
-  margin: 0 auto 38px;
-  text-align: center;
-}
-
 .section-heading h2 {
-  margin: 0 0 12px;
-  color: var(--faculty-dark);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin: 0 0 14px;
+  color: var(--faculty-primary);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
   line-height: 1.2;
 }
 
 .section-heading p {
-  margin: 0;
+  margin: 0 auto;
   color: var(--faculty-muted);
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-/* =========================================
-   DEPARTMENT CARDS
-   ========================================= */
+/* ---------- Department Grid ---------- */
 
 .department-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.department-card,
-.staff-card {
+/* ---------- Department Cards ---------- */
+
+.department-card {
   min-width: 0;
   overflow: hidden;
+  background: var(--faculty-white);
   border: 1px solid var(--faculty-border);
   border-radius: var(--faculty-radius);
-  background: #ffffff;
-  box-shadow: 0 6px 20px rgba(11, 19, 84, 0.06);
+  box-shadow: var(--faculty-shadow);
   transition:
-    border-color 0.3s ease,
+    transform 0.3s ease,
     box-shadow 0.3s ease,
-    transform 0.3s ease;
+    border-color 0.3s ease;
 }
 
-
-
-.department-card:hover,
-.staff-card:hover {
-  border-color: var(--faculty-light-blue);
-  box-shadow:
-    0 0 0 2px rgba(56, 189, 248, 0.15),
-    0 12px 28px rgba(14, 165, 217, 0.14);
-  transform: translateY(-5px);
+.department-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--faculty-blue);
+  box-shadow: var(--faculty-shadow-hover);
 }
 
-.department-card:focus-within,
-.staff-card:focus-within {
-  border-color: var(--faculty-light-blue);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-}
+/* ---------- Department Images ---------- */
 
 .department-image {
-  min-height: 205px;
-  background-color: #dbeafe;
+  position: relative;
+  min-height: 245px;
+  overflow: hidden;
+  background-color: #dce9f5;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  transition: background-size 0.3s ease;
 }
 
-/* Computing Faculty images */
+/* Computing Faculty department images */
 
 .software-image {
   background-image:
-    linear-gradient(rgba(10, 42, 94, 0.12), rgba(10, 42, 94, 0.12)),
-    url("images/software-engineering.jpg");
-}
-
-.it-image {
-  background-image:
-    linear-gradient(rgba(10, 42, 94, 0.12), rgba(10, 42, 94, 0.12)),
-    url("images/information-technology.jpg");
+    linear-gradient(
+      to top,
+      rgba(10, 28, 57, 0.35),
+      rgba(10, 28, 57, 0.02)
+    ),
+    url("images/faculty/computing/hero/department-of-computing.jpg");
 }
 
 .computing-image {
   background-image:
-    linear-gradient(rgba(10, 42, 94, 0.12), rgba(10, 42, 94, 0.12)),
-    url("images/computer-science.jpg");
+    linear-gradient(
+      to top,
+      rgba(10, 28, 57, 0.35),
+      rgba(10, 28, 57, 0.02)
+    ),
+    url("images/faculty/computing/hero/department-of-technology.png");
 }
 
-/* Management Faculty images */
+/* Management Faculty department images */
 
 .management-image {
   background-image:
-    linear-gradient(rgba(10, 42, 94, 0.12), rgba(10, 42, 94, 0.12)),
-    url("images/management-department.jpg");
+    linear-gradient(
+      to top,
+      rgba(10, 28, 57, 0.35),
+      rgba(10, 28, 57, 0.02)
+    ),
+    url("images/faculty/management/hero/department-of-management.jpg");
 }
 
 .languages-image {
   background-image:
-    linear-gradient(rgba(10, 42, 94, 0.12), rgba(10, 42, 94, 0.12)),
-    url("images/languages-department.jpg");
+    linear-gradient(
+      to top,
+      rgba(10, 28, 57, 0.35),
+      rgba(10, 28, 57, 0.02)
+    ),
+    url("images/faculty/management/hero/department-of-language.jpg");
 }
 
+/* ---------- Department Card Content ---------- */
+
 .department-body {
-  padding: 26px;
+  padding: 28px;
 }
 
 .card-number {
-  display: block;
+  display: inline-block;
   margin-bottom: 12px;
   color: var(--faculty-blue);
-  font-size: 0.73rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.3px;
 }
 
 .department-body h3 {
-  margin: 0 0 12px;
-  color: var(--faculty-dark);
-  font-size: 1.25rem;
+  margin: 0 0 14px;
+  color: var(--faculty-primary);
+  font-size: 1.35rem;
   line-height: 1.4;
 }
 
 .department-body p {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
   color: var(--faculty-muted);
   font-size: 0.95rem;
-  line-height: 1.75;
+  line-height: 1.8;
 }
+
+/* ---------- Department Links ---------- */
 
 .text-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--faculty-navy);
-  font-weight: 750;
+  color: var(--faculty-blue);
+  font-size: 0.92rem;
+  font-weight: 700;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .text-link span {
-  color: var(--faculty-blue);
-  transition: transform 180ms ease;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--faculty-primary);
 }
 
 .text-link:hover span {
   transform: translate(3px, -3px);
 }
 
-/* =========================================
-   STAFF SEARCH
-   ========================================= */
-
-.staff-search {
-  max-width: 640px;
-  margin: 0 auto 30px;
+.text-link:focus-visible {
+  outline: 3px solid var(--faculty-blue);
+  outline-offset: 4px;
+  border-radius: 3px;
 }
 
-.staff-search label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--faculty-dark);
-  font-size: 0.9rem;
-  font-weight: 700;
+/* ---------- Staff Section ---------- */
+
+.staff-section {
+  background: var(--faculty-background);
 }
 
-.staff-search input {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 48px;
-  padding: 12px 16px;
-  border: 1px solid var(--faculty-border);
-  border-radius: 12px;
-  background: #ffffff;
-  color: var(--faculty-text);
-  font: inherit;
-  outline: none;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
+.staff-section .section-heading {
+  margin-bottom: 45px;
 }
 
-.staff-search input:focus {
-  border-color: var(--faculty-blue);
-  box-shadow: 0 0 0 3px rgba(14, 165, 217, 0.15);
-}
-
-.search-message {
-  min-height: 1.2em;
-  margin: 8px 0 0;
-  color: var(--faculty-muted);
-  font-size: 0.85rem;
-}
-
-/* =========================================
-   ACADEMIC STAFF CARDS
-   ========================================= */
+/* ---------- Staff Grid ---------- */
 
 .staff-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 28px;
   align-items: stretch;
 }
 
-.staff-photo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 245px;
+/* ---------- Staff Cards ---------- */
+
+.staff-card {
+  min-width: 0;
   overflow: hidden;
-  background: #eaf3ff;
+  background: var(--faculty-white);
+  border: 1px solid var(--faculty-border);
+  border-radius: var(--faculty-radius);
+  box-shadow: var(--faculty-shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--faculty-blue);
+  box-shadow: var(--faculty-shadow-hover);
+}
+
+/* ---------- Staff Photos ---------- */
+
+.staff-photo-wrap {
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  background: #e8eef6;
 }
 
 .staff-photo {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  transition: transform 0.4s ease;
 }
 
+.staff-card:hover .staff-photo {
+  transform: scale(1.04);
+}
+
+/* ---------- Staff Information ---------- */
+
 .staff-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 190px;
-  padding: 22px;
-  text-align: center;
+  padding: 23px;
 }
 
 .staff-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  margin-bottom: 12px;
-  border-radius: 50%;
-  background: #e0f2fe;
-  color: var(--faculty-navy);
-  font-size: 0.75rem;
+  min-width: 38px;
+  min-height: 30px;
+  margin-bottom: 13px;
+  padding: 5px 10px;
+  color: var(--faculty-blue);
+  background: var(--faculty-blue-light);
+  border-radius: 7px;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
 .staff-info h3 {
   margin: 0 0 10px;
-  color: var(--faculty-dark);
-  font-size: 1.08rem;
-  line-height: 1.45;
-}
-
-.staff-role {
-  margin: 0 0 12px;
-  color: var(--faculty-blue);
-  font-size: 0.92rem;
-  font-weight: 750;
+  color: var(--faculty-primary);
+  font-size: 1.1rem;
   line-height: 1.5;
-}
-
-.staff-qualifications,
-.staff-department {
-  margin: 0;
-  color: var(--faculty-muted);
-  font-size: 0.88rem;
-  line-height: 1.7;
   overflow-wrap: anywhere;
 }
 
-.no-results {
-  margin-top: 24px;
+.staff-role {
+  margin: 0 0 10px;
+  color: var(--faculty-blue);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.staff-qualifications {
+  margin: 0;
   color: var(--faculty-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- No Search Results ---------- */
+
+.no-results {
+  margin: 30px 0 0;
+  padding: 20px;
+  color: var(--faculty-muted);
+  background: var(--faculty-white);
+  border: 1px solid var(--faculty-border);
+  border-radius: 12px;
   text-align: center;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-   ========================================= */
+/* ---------- Tablet ---------- */
 
 @media (max-width: 900px) {
+  .computing-section,
+  .management-section {
+    padding: 65px 22px;
+  }
+
   .staff-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
   }
 
-  .management-section,
-  .computing-section {
-    padding: 60px 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .management-container,
-  .computing-container {
-    width: min(calc(100% - 28px), 1120px);
-  }
-
-  .management-hero,
-  .computing-hero {
-    min-height: 350px;
-  }
-
-  .hero-content {
-    padding-block: 58px;
-  }
-
-  .department-grid,
-  .staff-grid {
-    grid-template-columns: 1fr;
+  .department-grid {
+    gap: 22px;
   }
 
   .department-image {
-    min-height: 190px;
-  }
-
-  .department-body {
-    padding: 22px;
+    min-height: 220px;
   }
 
   .staff-photo-wrap {
@@ -459,26 +370,75 @@ body {
   }
 }
 
+/* ---------- Mobile ---------- */
 
-
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+@media (max-width: 600px) {
+  .computing-section,
+  .management-section {
+    padding: 48px 16px;
   }
 
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.9rem;
+  }
+
+  .section-heading p {
+    font-size: 0.94rem;
+  }
+
+  .department-grid,
+  .staff-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .department-image {
+    min-height: 215px;
+  }
+
+  .department-body {
+    padding: 23px;
+  }
+
+  .staff-photo-wrap {
+    height: 320px;
+  }
+
+  .staff-info {
+    padding: 22px;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 380px) {
+  .staff-photo-wrap {
+    height: 260px;
+  }
+
+  .department-body,
+  .staff-info {
+    padding: 18px;
+  }
+}
+
+/* ---------- Reduced Motion Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .department-card,
+  .staff-card,
+  .staff-photo,
+  .text-link span {
+    transition: none;
   }
 
   .department-card:hover,
   .staff-card:hover,
-  .primary-button:hover {
+  .staff-card:hover .staff-photo {
     transform: none;
   }
 }
-
