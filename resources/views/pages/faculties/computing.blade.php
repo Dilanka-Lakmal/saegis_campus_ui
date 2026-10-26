@@ -87,7 +87,7 @@
       <!-- Staff 01 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/mr-navoda-kotugoda.jpg"
+          <img src="images/faculty/computing/staff/Navoda-Kotugoda.jpg"
                alt="Mr. Navoda Kotugoda"
                class="staff-photo" loading="lazy">
         </div>
@@ -102,7 +102,7 @@
       <!-- Staff 02 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/ms-navodi-sithara.jpg"
+          <img src="images/faculty/computing/staff/Navodi Sithara.jpeg"
                alt="Ms. Navodi Sithara"
                class="staff-photo" loading="lazy">
         </div>
@@ -117,7 +117,7 @@
       <!-- Staff 03 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/ms-tharushi-pramodhya.jpg"
+          <img src="images/faculty/computing/staff/Tharushi Promodhya.jpeg"
                alt="Ms. Tharushi Pramodhya"
                class="staff-photo" loading="lazy">
         </div>
@@ -147,7 +147,7 @@
       <!-- Staff 05 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/mr-udaya-perera.jpg"
+          <img src="images/faculty/computing/staff/Udaya Perera.jpeg"
                alt="Mr. Udaya Perera"
                class="staff-photo" loading="lazy">
         </div>
@@ -192,7 +192,7 @@
       <!-- Staff 08 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/mr-abilaas-renganathan.jpg"
+          <img src="images/faculty/computing/staff/Abilaas Reganathan.jpeg"
                alt="Mr. Abilaas Renganathan"
                class="staff-photo" loading="lazy">
         </div>
@@ -207,7 +207,7 @@
       <!-- Staff 09 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/ms-vidushani-imanthika.jpg"
+          <img src="images/faculty/computing/staff/Vidushani Imanthika.jpeg"
                alt="Ms. Vidushani Imanthika"
                class="staff-photo" loading="lazy">
         </div>
@@ -237,7 +237,7 @@
       <!-- Staff 11 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/computing/staff/mr-ajan-sri-sheheran.jpg"
+          <img src="images/faculty/computing/staff/Ajan Sheheran.jpeg"
                alt="Mr. Ajan Sri Sheheran"
                class="staff-photo" loading="lazy">
         </div>
