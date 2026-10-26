@@ -21,7 +21,11 @@
     @include('partials.topbar')
     @include('partials.header')
 
-    <main>
+        <main>
+        @isset($pageBanner)
+            @include('partials.inner-banner', ['pageBanner' => $pageBanner])
+        @endisset
+
         @yield('content')
     </main>
 
