@@ -179,6 +179,78 @@
             </div>
         </div>
 
+        <div class="row g-4 mb-5">
+                <!-- 5. BBM Honours in Logistics and Supply Chain Management -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
+                        <div class="card-img-box margin_bottom_18">
+                            <img src="/images/programs/management/bachelor-of-business-management-honours-in-logistics-and-supply-chain-management-1756411819.jpg" class="img-fluid rounded-2 w-100" alt="BBM Honours" onerror="this.onerror=null;this.src='/images/programs/bachelor-of-business-management-honours-1756411095.jpg';">
+                        </div>
+                        <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">Bachelor of Business Management Honours in Logistics and Supply Chain Management</h2>
+                        <div class="card-full-line margin_bottom_15"></div>
+                        <p class="margin_bottom_20 text_align_justify title_long fs-14 text-secondary">
+                            The Bachelor of Business Management (Honours) in Logistics and Supply Chain Management Degree is a four-year academic program comprising 120 credits, designed to provide students with a solid foundation in logistics, supply chain management, and industry practices.
+                        </p>
+                        <div class="w-100 text-center btn_dwn mt-auto pt-3">
+                            <a href="https://saegis.ac.lk/degree-program/10?slug=bachelor-of-business-management-honours" class="btn_a overlay text-decoration-none">
+                                <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
+                                    <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
+                                    <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+                <!-- 6. Bachelor of Business Administration -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
+                        <div class="card-img-box margin_bottom_18">
+                            <img src="/images/programs/management/bachelor-of--business-administration-1756411975.jpg" class="img-fluid rounded-2 w-100" alt="BBM HRM" onerror="this.onerror=null;this.src='/images/programs/bachelor-of-business-management-honours-in-hrm-1756411293.jpg';">
+                        </div>
+                        <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">Bachelor of Business Administration</h2>
+                        <div class="card-full-line margin_bottom_15"></div>
+                        <p class="margin_bottom_20 text_align_justify title_long fs-14 text-secondary">
+                           The Bachelor of Business Administration is a three-year degree program designed to provide students with a solid foundation in core areas of business and management.
+                        </p>
+                        <div class="w-100 text-center btn_dwn mt-auto pt-3">
+                            <a href="https://saegis.ac.lk/degree-program/11?slug=bachelor-of-business-management-honours-in-hrm" class="btn_a overlay text-decoration-none">
+                                <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
+                                    <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
+                                    <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. BBM Honours in Tourism and Hospitality Management -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
+                        <div class="card-img-box margin_bottom_18">
+                            <img src="/images/programs/management/bachelor-of-business-management-honours-in-tourism-and-hospitality-management-1756412136.jpg" class="img-fluid rounded-2 w-100" alt="BBM Marketing" onerror="this.onerror=null;this.src='/images/programs/bachelor-of-business-management-honours-in-marketing-1756411431.jpg';">
+                        </div>
+                        <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">Bachelor of Business Management Honours in Tourism and Hospitality Management</h2>
+                        <div class="card-full-line margin_bottom_15"></div>
+                        <p class="margin_bottom_20 text_align_justify title_long fs-14 text-secondary">
+                           The Bachelor of Business Management (Honours) in Tourism and Hospitality Management Degree is a four-year academic program designed to provide students with a solid foundation in tourism, hospitality management, and industry practices.
+                        </p>
+                        <div class="w-100 text-center btn_dwn mt-auto pt-3">
+                            <a href="https://saegis.ac.lk/degree-program/12?slug=bachelor-of-business-management-honours-in-marketing" class="btn_a overlay text-decoration-none">
+                                <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
+                                    <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
+                                    <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         <!-- SUBSECTION 2: TOP-UP DEGREES -->
         <div id="top-up" class="dept-course-category-block margin_bottom_90">
             <div class="category-title-header margin_bottom_40">
