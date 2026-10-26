@@ -5,8 +5,7 @@
 @section('content')
     <section class="faculty-page">
 
-
-        <!-- Departments Section -->
+<!-- Departments Section -->
 <section class="computing-section" id="departments">
   <div class="computing-container">
 
@@ -23,10 +22,11 @@
 
       <!-- Department of Computing -->
       <article class="department-card">
-        <div
-          class="department-image software-image"
-          role="img"
-          aria-label="Computing, software development and programming">
+        <div class="department-image">
+          <img
+            src="images/faculty/computing/hero/department-of-computing.jpg"
+            alt="Department of Computing"
+            loading="lazy">
         </div>
 
         <div class="department-body">
@@ -45,10 +45,11 @@
 
       <!-- Department of Technology -->
       <article class="department-card">
-        <div
-          class="department-image computing-image"
-          role="img"
-          aria-label="Technology, innovation and emerging technologies">
+        <div class="department-image">
+          <img
+            src="images/faculty/computing/hero/department-of-technology.png"
+            alt="Department of Technology"
+            loading="lazy">
         </div>
 
         <div class="department-body">
