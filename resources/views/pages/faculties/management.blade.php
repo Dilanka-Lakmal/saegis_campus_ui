@@ -79,7 +79,7 @@
       <!-- Staff 01 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-yamuna-fernando.jpg"
+          <img src="images/faculty/management/staff/Yamuna Fernando.jpeg"
                alt="Ms. Yamuna Fernando"
                class="staff-photo" loading="lazy">
         </div>
@@ -94,8 +94,8 @@
       <!-- Staff 02 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-iruni-satharasinghe.jpg"
-               alt="Ms. Iruni Satharasinghe"
+          <img src="images/faculty/management/staff/Iruni Satharasinghe.jpg"
+               alt="Iruni Satharasinghe"
                class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
@@ -109,7 +109,7 @@
       <!-- Staff 03 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/mr-selvananthan-gopikrishna.jpg"
+          <img src="images/faculty/management/staff/selvananthan gopikrishna.jpg"
                alt="Mr. Selvananthan Gopikrishna"
                class="staff-photo" loading="lazy">
         </div>
@@ -124,7 +124,7 @@
       <!-- Staff 04 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-paramitha-herath.jpg"
+          <img src="images/faculty/management/staff/Paramitha Herath.jpeg"
                alt="Ms. Paramitha Herath"
                class="staff-photo" loading="lazy">
         </div>
@@ -154,7 +154,7 @@
       <!-- Staff 06 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-pipuni-dharmathilake.jpg"
+          <img src="images/faculty/management/staff/Pipuni-Dharmathilake.jpg"
                alt="Ms. Pipuni Dharmathilake"
                class="staff-photo" loading="lazy">
         </div>
@@ -169,7 +169,7 @@
       <!-- Staff 07 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-niroshani-sandamali.jpg"
+          <img src="images/faculty/management/staff/Niroshani-Sandamali.jpg"
                alt="Ms. Niroshani Sandamali"
                class="staff-photo" loading="lazy">
         </div>
@@ -184,7 +184,7 @@
       <!-- Staff 08 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-nethmini-sandalekha.jpg"
+          <img src="images/faculty/management/staff/Nethmini-Sandalekha.jpg"
                alt="Ms. Nethmini Sandalekha"
                class="staff-photo" loading="lazy">
         </div>
@@ -199,7 +199,7 @@
       <!-- Staff 09 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img src="images/faculty/management/staff/ms-kaumini-hasanga.jpg"
+          <img src="images/faculty/management/staff/Kaumini Hasanga.jpeg"
                alt="Ms. Kaumini Hasanga"
                class="staff-photo" loading="lazy">
         </div>
@@ -243,9 +243,7 @@
 
     </div>
 
-    <p class="no-results" id="noResults" hidden>
-      No academic staff members match your search.
-    </p>
+    
 
   </div>
 </section>
