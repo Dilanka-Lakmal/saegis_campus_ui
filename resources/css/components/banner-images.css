@@ -1,0 +1,43 @@
+/* Shared banner for faculty and department pages (Member 1).
+   Styles the existing .inner_banner_bread_crumbs section.
+   !important is needed because the pages set the background inline. */
+.inner_banner_bread_crumbs {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0;
+    color: #fff;
+    background: #011850 url('/images/banners/dept-banner.jpg') no-repeat right top / cover !important;
+}
+
+.inner_banner_bread_crumbs > * {
+    position: relative;
+    z-index: 1;
+}
+
+.inner_banner_bread_crumbs h1,
+.inner_banner_bread_crumbs h2,
+.inner_banner_bread_crumbs h3,
+.inner_banner_bread_crumbs p,
+.inner_banner_bread_crumbs li,
+.inner_banner_bread_crumbs span,
+.inner_banner_bread_crumbs a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.inner_banner_bread_crumbs h1 {
+    font-size: clamp(1.8rem, 3.2vw, 3rem);
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .inner_banner_bread_crumbs::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(1, 24, 80, 0.78);
+    }
+}
