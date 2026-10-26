@@ -6,63 +6,57 @@
     <section class="faculty-page">
 
 
-       <!-- Departments Section -->
-<section class="computing-section" id="departments">
-  <div class="computing-container">
+      <section class="management-section" id="departments">
+  <div class="management-container">
 
     <div class="section-heading">
       <span class="section-label">DISCOVER YOUR PATH</span>
       <h2>Our Departments</h2>
-      <p>
-        Explore the departments within the Faculty of Computing
-        and Technology and discover your academic path.
-      </p>
+      <p>Explore the academic areas within our faculty.</p>
     </div>
 
     <div class="department-grid">
 
-      <!-- Department of Computing -->
+      <!-- Department of Management -->
       <article class="department-card">
         <div class="department-image">
           <img
-            src="images/faculty/computing/hero/department-of-computing.jpg"
-            alt="Department of Computing"
+            src="images/faculty/management/hero/department-of-management.jpg"
+            alt="Department of Management"
             loading="lazy">
         </div>
 
         <div class="department-body">
           <span class="card-number">01 / DEPARTMENT</span>
-          <h3>Department of Computing</h3>
+          <h3>Department of Management</h3>
           <p>
-            Explore software engineering, programming, information
-            technology, databases, computer networks, and software
-            development to build practical computing skills.
+            Explore management education, business knowledge,
+            leadership, and professional development.
           </p>
           <a class="text-link" href="#">
-            Explore Programmes <span>↗</span>
+            Explore Department <span>↗</span>
           </a>
         </div>
       </article>
 
-      <!-- Department of Technology -->
+      <!-- Department of Languages -->
       <article class="department-card">
         <div class="department-image">
           <img
-            src="images/faculty/computing/hero/department-of-technology.png"
-            alt="Department of Technology"
+            src="images/faculty/management/hero/department-of-language.jpg"
+            alt="Department of Languages"
             loading="lazy">
         </div>
 
         <div class="department-body">
           <span class="card-number">02 / DEPARTMENT</span>
-          <h3>Department of Technology</h3>
+          <h3>Department of Languages</h3>
           <p>
-            Discover technology-focused learning, digital innovation,
-            emerging technologies, and practical technical skills
-            for solving real-world problems.
+            Develop language, communication, and academic skills
+            to support your educational and professional journey.
           </p>
           <a class="text-link" href="#">
-            Explore Programmes <span>↗</span>
+            Explore Department <span>↗</span>
           </a>
         </div>
       </article>
