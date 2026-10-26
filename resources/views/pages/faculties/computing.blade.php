@@ -5,6 +5,7 @@
 @section('content')
     <section class="faculty-page">
 
+
         <!-- Departments Section -->
 <section class="computing-section" id="departments">
   <div class="computing-container">
@@ -20,7 +21,7 @@
 
     <div class="department-grid">
 
-      <!-- Department 1: Computing -->
+      <!-- Department of Computing -->
       <article class="department-card">
         <div
           class="department-image software-image"
@@ -29,27 +30,20 @@
         </div>
 
         <div class="department-body">
-          <span class="card-number">DEPARTMENT</span>
-
+          <span class="card-number">01 / DEPARTMENT</span>
           <h3>Department of Computing</h3>
-
           <p>
             Explore software engineering, programming, information
             technology, databases, computer networks, and software
             development to build practical computing skills.
           </p>
-
-          <a
-            class="text-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer">
+          <a class="text-link" href="#">
             Explore Programmes <span>↗</span>
           </a>
         </div>
       </article>
 
-      <!-- Department 2: Technology -->
+      <!-- Department of Technology -->
       <article class="department-card">
         <div
           class="department-image computing-image"
@@ -58,21 +52,14 @@
         </div>
 
         <div class="department-body">
-          <span class="card-number">DEPARTMENT</span>
-
+          <span class="card-number">02 / DEPARTMENT</span>
           <h3>Department of Technology</h3>
-
           <p>
             Discover technology-focused learning, digital innovation,
             emerging technologies, and practical technical skills
             for solving real-world problems.
           </p>
-
-          <a
-            class="text-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer">
+          <a class="text-link" href="#">
             Explore Programmes <span>↗</span>
           </a>
         </div>
@@ -82,7 +69,6 @@
   </div>
 </section>
 
-   
 <!-- Academic Staff Section -->
 <section class="computing-section staff-section" id="staff">
   <div class="computing-container">
@@ -95,21 +81,14 @@
       </p>
     </div>
 
-    <!-- Staff Search -->
-
-
-    <!-- Computing Faculty Staff Cards -->
     <div class="staff-grid" id="staffGrid">
 
-      <!-- Staff 1 -->
+      <!-- Staff 01 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-1.jpg"
-            alt="Mr. Navoda Kotugoda"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/mr-navoda-kotugoda.jpg"
+               alt="Mr. Navoda Kotugoda"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">01</span>
@@ -119,15 +98,12 @@
         </div>
       </article>
 
-      <!-- Staff 2 -->
+      <!-- Staff 02 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-2.jpg"
-            alt="Ms. Navodi Sithara"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/ms-navodi-sithara.jpg"
+               alt="Ms. Navodi Sithara"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">02</span>
@@ -137,15 +113,12 @@
         </div>
       </article>
 
-      <!-- Staff 3 -->
+      <!-- Staff 03 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-3.jpg"
-            alt="Ms. Tharushi Pramodhya"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/ms-tharushi-pramodhya.jpg"
+               alt="Ms. Tharushi Pramodhya"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">03</span>
@@ -155,15 +128,12 @@
         </div>
       </article>
 
-      <!-- Staff 4 -->
+      <!-- Staff 04 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-4.jpg"
-            alt="Ms. Ashani Gallage"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/ms-ashani-gallage.jpg"
+               alt="Ms. Ashani Gallage"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">04</span>
@@ -173,15 +143,12 @@
         </div>
       </article>
 
-      <!-- Staff 5 -->
+      <!-- Staff 05 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-5.jpg"
-            alt="Mr. Udaya Perera"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/mr-udaya-perera.jpg"
+               alt="Mr. Udaya Perera"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">05</span>
@@ -191,15 +158,12 @@
         </div>
       </article>
 
-      <!-- Staff 6 -->
+      <!-- Staff 06 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-6.jpg"
-            alt="Ms. Wasana Manathunga"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/ms-wasana-manathunga.jpg"
+               alt="Ms. Wasana Manathunga"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">06</span>
@@ -209,15 +173,12 @@
         </div>
       </article>
 
-      <!-- Staff 7 -->
+      <!-- Staff 07 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-7.jpg"
-            alt="Mr. Janidu Fernando"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/mr-janidu-fernando.jpg"
+               alt="Mr. Janidu Fernando"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">07</span>
@@ -227,15 +188,12 @@
         </div>
       </article>
 
-      <!-- Staff 8 -->
+      <!-- Staff 08 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-8.jpg"
-            alt="Mr. Abilaas Renganathan"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/mr-abilaas-renganathan.jpg"
+               alt="Mr. Abilaas Renganathan"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">08</span>
@@ -245,15 +203,12 @@
         </div>
       </article>
 
-      <!-- Staff 9 -->
+      <!-- Staff 09 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-9.jpg"
-            alt="Ms. Vidushani Imanthika"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/ms-vidushani-imanthika.jpg"
+               alt="Ms. Vidushani Imanthika"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">09</span>
@@ -266,12 +221,9 @@
       <!-- Staff 10 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-10.jpg"
-            alt="Mr. Themira Edirisinghe"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/mr-themira-edirisinghe.jpg"
+               alt="Mr. Themira Edirisinghe"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">10</span>
@@ -284,12 +236,9 @@
       <!-- Staff 11 -->
       <article class="staff-card">
         <div class="staff-photo-wrap">
-          <img
-            src="images/computing-staff-11.jpg"
-            alt="Mr. Ajan Sri Sheheran"
-            class="staff-photo"
-            loading="lazy"
-          >
+          <img src="images/faculty/computing/staff/mr-ajan-sri-sheheran.jpg"
+               alt="Mr. Ajan Sri Sheheran"
+               class="staff-photo" loading="lazy">
         </div>
         <div class="staff-info">
           <span class="staff-number">11</span>
@@ -301,7 +250,6 @@
 
     </div>
 
-    <!-- No Search Results -->
     <p class="no-results" id="noResults" hidden>
       No academic staff members match your search.
     </p>
@@ -309,6 +257,8 @@
   </div>
 </section>
 
+
+        
         
     </section>
 @endsection
