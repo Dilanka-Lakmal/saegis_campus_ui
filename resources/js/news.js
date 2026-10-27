@@ -18,12 +18,15 @@
     let visibleCards = 3;
     let maxIndex = 0;
     let resizeTimer;
-
+    
     function getVisibleCards() {
         if (window.matchMedia("(max-width: 575px)").matches) return 1;
         if (window.matchMedia("(max-width: 991px)").matches) return 2;
-        return 3;
+        return 4;
     }
+
+
+    
 
     function createDots() {
         dotsContainer.innerHTML = "";
