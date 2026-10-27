@@ -37,7 +37,7 @@
             technology, databases, computer networks, and software
             development to build practical computing skills.
           </p>
-          <a class="text-link" href="#">
+          <a class="text-link" href="department-of-computing">
             Explore Programmes <span>↗</span>
           </a>
         </div>

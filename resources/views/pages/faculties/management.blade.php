@@ -34,7 +34,7 @@
             Explore management education, business knowledge,
             leadership, and professional development.
           </p>
-          <a class="text-link" href="#">
+          <a class="text-link" href="department-of-management">
             Explore Department <span>↗</span>
           </a>
         </div>
@@ -56,7 +56,7 @@
             Develop language, communication, and academic skills
             to support your educational and professional journey.
           </p>
-          <a class="text-link" href="#">
+          <a class="text-link" href="department-of-languages">
             Explore Department <span>↗</span>
           </a>
         </div>
