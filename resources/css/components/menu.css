@@ -1,319 +1,27 @@
-
 /* ==========================================================================
-   HIDE HERO TEXT WHEN MOBILE MENU IS OPEN
+   HIDE HERO TEXT WHEN NAVIGATION DROPDOWN IS OPEN (PC & MOBILE)
    ========================================================================== */
+body.desktop-menu-active .overlay-text,
+body.mobile-menu-active .overlay-text,
 .mobile-nav.open ~ #heroVideoSection .overlay-text,
 .mobile-nav.open ~ .hero-slider .overlay-text,
 body:has(.mobile-nav.open) .overlay-text {
     opacity: 0 !important;
     visibility: hidden !important;
-    transition: opacity 0.25s ease, visibility 0.25s ease !important;
+    transform: translateY(-55%) !important;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease !important;
 }
 
-body.mobile-menu-active .overlay-text {
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-/* ==========================================================================
-   MAIN HEADER & RESPONSIVE NAVIGATION
-   ========================================================================== */
-
-.main-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    position: relative;
-    z-index: 1000;
-}
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo-img img {
-    height: 48px;
-    width: auto;
-    display: block;
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 16px;
-}
-
-.nav-button {
-    background: none;
-    border: none;
-    font-weight: 700;
-    font-size: 13px;
-    color: #0b1354;
-    cursor: pointer;
-    padding: 8px 6px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.contact-link {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    color: #0b1354;
-    padding: 8px 6px;
-}
-
-.apply-button {
-    background-color: #0b1354;
-    color: #ffffff !important;
-    padding: 8px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    display: inline-block;
-    transition: background 0.2s ease;
-}
-
-.apply-button:hover {
-    background-color: #1d2a88;
-}
-
-/* DESKTOP MEGA MENU DROPDOWN */
-.mega-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border-top: 2px solid #0b1354;
-}
-
-.nav-item.open .mega-menu {
-    display: block;
-}
-
-.mega-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 25px 20px;
-}
-
-.mega-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.mega-heading {
-    font-weight: 700;
-    color: #0b1354;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.mega-links a {
-    display: block;
-    color: #475569;
-    text-decoration: none;
-    font-size: 13px;
-    margin-bottom: 6px;
+/* Base smooth transition for hero text overlay */
+.overlay-text {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 /* ==========================================================================
-   MOBILE TOGGLE BUTTON & GLASSMORPHISM VERTICAL MENU
-   ========================================================================== */
-
-.mobile-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.mobile-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: #0b1354;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Animated Hamburger Cross */
-.mobile-toggle.active span:nth-child(1) {
-    transform: translateY(8.5px) rotate(45deg);
-}
-.mobile-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-.mobile-toggle.active span:nth-child(3) {
-    transform: translateY(-8.5px) rotate(-45deg);
-}
-
-/* DARK GLASSMORPHISM MOBILE DRAWER */
-/* ==========================================================================
-   GLASSMORPHISM MOBILE DRAWER WITH HOVER EFFECTS
-   ========================================================================== */
-
-/* Dark Glassy Mobile Navigation Drawer */
-.mobile-nav {
-    display: none;
-    position: absolute !important; /* Overlays on top of Hero section so video shows underneath */
-    top: 100%;
-    left: 0;
-    width: 100%;
-    
-    /* Transparent Slate-Navy Glass matching desktop */
-    background: rgba(1, 20, 57, 0.70) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    
-    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
-    
-    max-height: 80vh;
-    overflow-y: auto;
-    z-index: 1001;
-}
-
-.mobile-nav.open {
-    display: block !important;
-}
-
-.mobile-menu-list {
-    list-style: none;
-    padding: 12px 20px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-}
-
-/* Category Title Buttons */
-.mobile-item-btn {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 0;
-    background: transparent !important;
-    border: none;
-    font-weight: 700;
-    font-size: 14px;
-    color: #ffffff !important;
-    cursor: pointer;
-}
-
-.mobile-dropdown {
-    display: none;
-    padding: 8px 0 18px 12px;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.mobile-item.open .mobile-dropdown {
-    display: flex !important;
-}
-
-/* Subheadings */
-.mobile-subheading {
-    font-weight: 800;
-    font-size: 12px;
-    color: #38bdf8 !important; /* Cyan blue heading */
-    margin-top: 6px;
-    text-transform: uppercase;
-}
-
-.mobile-vertical-links {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-left: 8px;
-}
-
-/* Sub-links (e.g. All Programmes, Certificate, etc.) with Desktop Hover Effects */
-.mobile-vertical-links a {
-    color: #f1f5f9 !important;
-    text-decoration: none;
-    font-size: 13.5px;
-    padding: 4px 0;
-    display: block;
-    transition: color 0.2s ease, padding-left 0.2s ease, transform 0.2s ease !important;
-}
-
-/* Hover Effect: Turns cyan and shifts right like desktop */
-.mobile-vertical-links a:hover,
-.mobile-vertical-links a:focus {
-    color: #38bdf8 !important;
-    padding-left: 6px !important;
-}
-
-.mobile-direct-link {
-    display: block;
-    padding: 14px 0;
-    font-weight: 700;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease !important;
-}
-
-.mobile-direct-link:hover {
-    color: #38bdf8 !important;
-}
-
-.mobile-feature-wrapper {
-    margin-top: 12px;
-}
-
-/* Mobile Breakpoint */
-@media (max-width: 991px) {
-    .main-nav {
-        display: none;
-    }
-
-    .mobile-toggle {
-        display: flex;
-    }
-}
-
-
-
-
-/* separate */
-
-
-
-
-/* ==========================================
    TOPBAR
-========================================== */
+   ========================================================================== */
 .topbar {
-    background-color: #0b0451; /* Dark navy background */
+    background-color: #0b0451;
     height: 48px;
     display: flex;
     align-items: center;
@@ -350,19 +58,16 @@ body.mobile-menu-active .overlay-text {
     color: #38bdf8;
 }
 
-/* Icon Images Styling */
 .topbar-icon {
     width: 18px;
     height: 18px;
     object-fit: contain;
 }
 
-/* Student Portal Link */
 .student-portal {
     font-weight: 500;
 }
 
-/* Rounded White Search Bar */
 .topbar-search input {
     width: 220px;
     height: 32px;
@@ -379,9 +84,9 @@ body.mobile-menu-active .overlay-text {
     color: #888888;
 }
 
-/* ==========================================
+/* ==========================================================================
    MAIN HEADER & LOGO
-========================================== */
+   ========================================================================== */
 .main-header {
     position: sticky;
     top: 0;
@@ -418,9 +123,9 @@ body.mobile-menu-active .overlay-text {
     font-weight: 600;
 }
 
-/* ==========================================
+/* ==========================================================================
    DESKTOP NAVIGATION & MEGA MENU
-========================================== */
+   ========================================================================== */
 .main-nav {
     margin-left: auto;
 }
@@ -490,26 +195,39 @@ body.mobile-menu-active .overlay-text {
     transform: translateY(-1px);
 }
 
-/* ==========================================
+/* ==========================================================================
    GLASSMORPHISM MEGA MENU DROPDOWN
-========================================== */
+   ========================================================================== */
 .mega-menu {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    display: none; /* Strictly hidden until parent has .open class */
-    
-    background: rgba(1, 20, 57, 0.75); /* Dark slate gray with 75% opacity */
+    display: none;
+    background: rgba(1, 20, 57, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    
     z-index: 1001;
     color: #ffffff;
+}
+
+.nav-item.open .mega-menu {
+    display: block;
+}
+
+.mega-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.mega-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .mega-column {
@@ -550,24 +268,7 @@ body.mobile-menu-active .overlay-text {
     padding-left: 6px;
 }
 
-/* DISPLAY ONLY WHEN OPENED VIA JS */
-.nav-item.open .mega-menu {
-    display: block;
-}
-
-.mega-inner {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.mega-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-/* GLASSMORPHISM TRANSPARENT DARK-GRAY FEATURE CARD */
+/* FEATURE PANEL & PROGRAMME FINDER CARD */
 .feature-panel {
     background: rgba(30, 41, 59, 0.55);
     backdrop-filter: blur(12px);
@@ -621,9 +322,6 @@ body.mobile-menu-active .overlay-text {
     border-color: #00A8E8;
 }
 
-/* ==========================================
-   PROGRAMME FINDER CARD inside MENU
-========================================== */
 .programme-finder-column {
     border-right: none !important;
 }
@@ -717,33 +415,6 @@ body.mobile-menu-active .overlay-text {
     white-space: nowrap;
 }
 
-.finder-select {
-    width: 100%;
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.25);
-    outline: none;
-    background: rgba(3, 24, 52, 0.95);
-    color: #ffffff;
-    font-size: 11px;
-    cursor: pointer;
-}
-
-.finder-select:hover,
-.finder-select:focus {
-    border-color: #38bdf8;
-}
-
-.finder-select:focus {
-    box-shadow: 0 0 0 3px rgba(56,189,248,0.10);
-}
-
-.finder-select option {
-    background: #08234b;
-    color: #ffffff;
-}
-
 .finder-button {
     width: 100%;
     display: flex;
@@ -777,4 +448,152 @@ body.mobile-menu-active .overlay-text {
     transform: translateX(3px);
 }
 
+/* ==========================================================================
+   MOBILE TOGGLE BUTTON & DRAWER MENU
+   ========================================================================== */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
 
+.mobile-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #0b1354;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(1, 20, 57, 0.70) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.mobile-nav.open {
+    display: block !important;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 12px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.mobile-item-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    background: transparent !important;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.mobile-dropdown {
+    display: none;
+    padding: 8px 0 18px 12px;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mobile-item.open .mobile-dropdown {
+    display: flex !important;
+}
+
+.mobile-subheading {
+    font-weight: 800;
+    font-size: 12px;
+    color: #38bdf8 !important;
+    margin-top: 6px;
+    text-transform: uppercase;
+}
+
+.mobile-vertical-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 8px;
+}
+
+.mobile-vertical-links a {
+    color: #f1f5f9 !important;
+    text-decoration: none;
+    font-size: 13.5px;
+    padding: 4px 0;
+    display: block;
+    transition: color 0.2s ease, padding-left 0.2s ease, transform 0.2s ease !important;
+}
+
+.mobile-vertical-links a:hover,
+.mobile-vertical-links a:focus {
+    color: #38bdf8 !important;
+    padding-left: 6px !important;
+}
+
+.mobile-direct-link {
+    display: block;
+    padding: 14px 0;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease !important;
+}
+
+.mobile-direct-link:hover {
+    color: #38bdf8 !important;
+}
+
+.mobile-feature-wrapper {
+    margin-top: 12px;
+}
+
+/* Mobile Responsive Breakpoint */
+@media (max-width: 991px) {
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+}

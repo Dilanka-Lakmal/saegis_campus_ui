@@ -5,7 +5,6 @@ const menuData = {
             {
                 heading: "Programmes",
                 links: [
-                    
                     { label: "Certificate", url: "#certificate" },
                     { label: "Foundation", url: "#foundation" },
                     { label: "Undergraduate", url: "#diploma" },
@@ -116,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     applyLi.innerHTML = `<a href="#" class="apply-button" data-bs-toggle="modal" data-bs-target="#registerModal">APPLY NOW</a>`;
     desktopNav.appendChild(applyLi);
 
-    // 2. POPULATE VERTICAL MOBILE NAV (INCLUDES FEATURE CARDS)
+    // 2. POPULATE VERTICAL MOBILE NAV
     if (mobileNav) {
         let mobileHtml = `<ul class="mobile-menu-list">`;
         Object.entries(menuData).forEach(([key, menu]) => {
@@ -146,20 +145,33 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileNav.innerHTML = mobileHtml;
     }
 
-    // 3. DESKTOP DROPDOWN INTERACTIONS
+    // 3. DESKTOP DROPDOWN INTERACTIONS (Hides Hero Text on Open)
     const navItems = desktopNav.querySelectorAll(".nav-item");
     navItems.forEach(item => {
         const button = item.querySelector(".nav-button");
         if (!button) return;
+
         button.addEventListener("click", function (e) {
             e.stopPropagation();
             const isOpen = item.classList.contains("open");
+
+            // Close all open dropdowns
             navItems.forEach(i => i.classList.remove("open"));
-            if (!isOpen) item.classList.add("open");
+
+            if (!isOpen) {
+                item.classList.add("open");
+                document.body.classList.add("desktop-menu-active"); // Hide hero overlay text
+            } else {
+                document.body.classList.remove("desktop-menu-active"); // Restore hero text
+            }
         });
     });
 
-    document.addEventListener("click", () => navItems.forEach(i => i.classList.remove("open")));
+    // Close menu & restore hero text when clicking outside
+    document.addEventListener("click", () => {
+        navItems.forEach(i => i.classList.remove("open"));
+        document.body.classList.remove("desktop-menu-active");
+    });
 
     // 4. MOBILE HAMBURGER TOGGLE
     if (mobileToggle && mobileNav) {
@@ -169,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
             mobileToggle.classList.toggle("active");
             mobileToggle.setAttribute("aria-expanded", isOpen);
             
-            // Toggle body class so hero text hides cleanly on mobile
+            // Toggle body class to hide hero text on mobile
             document.body.classList.toggle("mobile-menu-active", isOpen);
         });
     }
