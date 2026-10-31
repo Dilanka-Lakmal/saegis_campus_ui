@@ -6,3 +6,5 @@ import './news.js';
 import './faculty.js';
 import './department.js';
 import './hero_video.js';
+
+import './course.js';

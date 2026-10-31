@@ -21,3 +21,8 @@
 @import './components/faculty.css';
 @import './components/department.css';
 @import './components/banner-images.css';
+
+@import './components/course-page.css';
+@import './components/course-overview.css';
+@import './components/course-curriculum.css';
+@import './components/course-interactive.css';
