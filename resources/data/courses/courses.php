@@ -7,6 +7,8 @@ return [
         'tagline'    => 'The right place for your Higher Education!',
         'duration'   => '48 Months',
         'credits'    => 120,
+        'study_mode' => 'On Site',
+        'lecture_option' => 'Weekdays'
     ],
     'ba-english' => [
         'department' => 'languages',
@@ -14,6 +16,8 @@ return [
         'tagline'    => 'The right place for your Higher Education!',
         'duration'   => '36 Months',
         'credits'    => 94,
+        'study_mode' => 'Blended/full time',
+        'lecture_option' => 'Weekdays'
     ],
 
     'bsc-cs' => [
@@ -22,5 +26,7 @@ return [
         'tagline'    => 'The right place for your Higher Education!',
         'duration'   => '48 Months',
         'credits'    => 120,
+        'study_mode' => 'On Site',
+        'lecture_option' => 'Weekdays'
     ]
 ];
