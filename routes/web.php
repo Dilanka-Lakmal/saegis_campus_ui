@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\DepartmentController;
@@ -16,3 +16,5 @@ Route::get('/faculty-of-computing', [FacultyController::class, 'computing'])->na
 Route::get('/department-of-management', [DepartmentController::class, 'management'])->name('department.management');
 Route::get('/department-of-languages', [DepartmentController::class, 'languages'])->name('department.languages');
 Route::get('/department-of-computing', [DepartmentController::class, 'computing'])->name('department.computing');
+
+Route::get('/courses/{slug}', [CourseController::class, 'show'])->name('courses.show');
