@@ -1,4 +1,4 @@
-<section class="inner_banner_bread_crumbs margin_bottom_30">
+<section class="inner_banner_bread_crumbs margin_bottom_30 {{ isset($pageBanner['variant']) ? 'inner_banner_bread_crumbs--' . $pageBanner['variant'] : '' }}">
     <div class="container">
         <div class="banner-text">
             <h1>{{ $pageBanner['title'] }}</h1>

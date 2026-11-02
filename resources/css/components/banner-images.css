@@ -66,3 +66,14 @@
         max-width: 100%;
     }
 }
+
+/* Course pages use their own banner image */
+.inner_banner_bread_crumbs.inner_banner_bread_crumbs--course {
+    background: #05013e url('/images/banners/course-banner.jpg') no-repeat right top / cover !important;
+}
+
+@media (max-width: 991px) {
+    .inner_banner_bread_crumbs--course::before {
+        background: rgba(5, 1, 62, 0.78);
+    }
+}
