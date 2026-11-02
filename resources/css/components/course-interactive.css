@@ -1,1 +1,115 @@
 /* Sticky nav, inquiry form and partners (Member 4) */
+/* ==========================================
+   INQUIRY FORM STYLING
+========================================== */
+.bg_ice_blue, 
+.course-inquiry-section {
+    background-color: #f0f4f8;
+}
+
+.inquiry-subtitle {
+    font-size: 18px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.inquiry-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text-cyan {
+    color: #00A8E8 !important;
+}
+
+.text-navy {
+    color: #0b1354 !important;
+}
+
+.heading-line-center {
+    width: 80px;
+    height: 3px;
+    background-color: #00A8E8;
+    border: none;
+    opacity: 1;
+}
+
+.heading-line-center.cyan-line {
+    background-color: #38bdf8;
+}
+
+.inquiry-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.custom-input {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 15px;
+    color: #1e293b;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-input:focus {
+    border-color: #00A8E8;
+    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.15);
+    outline: none;
+}
+
+.inquiry-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #093D85;
+    color: #ffffff;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.inquiry-submit-btn:hover {
+    background-color: #052859;
+    transform: translateY(-2px);
+}
+
+.btn-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    color: #093D85;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.btn-text {
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   INSTITUTIONAL QUOTE STYLING
+========================================== */
+.course-quote-section {
+    background-color: #ffffff;
+}
+
+.institutional-quote-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #334155;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif, system-ui;
+}

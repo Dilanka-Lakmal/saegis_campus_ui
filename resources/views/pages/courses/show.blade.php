@@ -20,5 +20,5 @@
     </div>
 
     @include('pages.courses.partials.inquiry-form')
-    @include('pages.courses.partials.partners')
+    @include('home.partners')
 @endsection
