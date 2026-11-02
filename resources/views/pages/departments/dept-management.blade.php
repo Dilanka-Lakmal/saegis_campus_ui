@@ -101,7 +101,7 @@
                             The Bachelor of Business Management (Honours) Degree is a four-year academic program comprising 120 credits, designed to provide students with a solid foundation in core management principles and practice.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/10?slug=bachelor-of-business-management-honours" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bbm-honours') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -123,7 +123,7 @@
                             The Bachelor of Business Management Honours in Human Resource Management is a four-year degree program totaling 120 academic credits, designed to develop future professionals with specialized strategic HR knowledge.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/11?slug=bachelor-of-business-management-honours-in-hrm" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bbm-hrm') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -145,7 +145,7 @@
                             The Bachelor of Business Management Honours in Marketing is a four-year degree program comprising 120 academic credits, designed to provide students with a strong foundation in modern marketing principles.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/12?slug=bachelor-of-business-management-honours-in-marketing" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bbm-marketing') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -167,7 +167,7 @@
                             The Bachelor of Business Management Honours in Accounting & Finance is a four-year degree program comprising 120 academic credits, designed to develop theoretical and practical financial expertise.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/13?slug=bachelor-of-business-management-honours-in-accounting-finance" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bbm-accounting-finance') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -192,7 +192,7 @@
                             The Bachelor of Business Management (Honours) in Logistics and Supply Chain Management Degree is a four-year academic program comprising 120 credits, designed to provide students with a solid foundation in logistics, supply chain management, and industry practices.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/10?slug=bachelor-of-business-management-honours" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bbm-logistics-scm') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -216,7 +216,7 @@
                            The Bachelor of Business Administration is a three-year degree program designed to provide students with a solid foundation in core areas of business and management.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/11?slug=bachelor-of-business-management-honours-in-hrm" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bba') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -238,7 +238,7 @@
                            The Bachelor of Business Management (Honours) in Tourism and Hospitality Management Degree is a four-year academic program designed to provide students with a solid foundation in tourism, hospitality management, and industry practices.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/12?slug=bachelor-of-business-management-honours-in-marketing" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bbm-tourism-hospitality') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -274,7 +274,7 @@
                             The BSc (Hons) in Business Management, offered in exclusive partnership with Canterbury Christ Church University, is meticulously designed to provide you with comprehensive skills for corporate leadership.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/28?slug=bsc-hons-business-management" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-business-management') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -296,7 +296,7 @@
                             The BSc (Hons) in Accounting & Finance, offered with Canterbury Christ Church University, is structured to equip students with in-depth analytical and financial knowledge.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/29?slug=bsc-hons-accounting-finance" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-accounting-finance') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -331,7 +331,7 @@
                             BTEC Higher Nationals are internationally-recognised qualifications equivalent to the first two years of a university degree.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/32?slug=hnd-in-business-business-management" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'hnd-business-management') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -353,7 +353,7 @@
                             BTEC Higher Nationals at Level 4 and 5 offer practical vocational preparation for accounting and financial management roles.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/33?slug=hnd-in-business-accounting-and-finance" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'hnd-accounting-finance') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>

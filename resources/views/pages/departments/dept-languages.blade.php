@@ -100,7 +100,7 @@
                             The BA in English is a well-structured degree designed to develop advanced skills in language, literature, and communication. Students gain strong abilities in critical thinking, academic writing, and literary analysis.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/17?slug=bachelor-of-arts-in-english" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'ba-english') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -135,7 +135,7 @@
                             The Dual Certificate in English and IT offers a unique blend of skills crucial in today's digital world. It equips students with strong communication abilities alongside foundational computing and IT competencies.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/44?slug=dual-certificate-in-english-and-information-technology" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'dual-certificate-english-it') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -170,7 +170,7 @@
                             The Pearson Assured Diploma in English is a prestigious and globally recognized qualification designed to validate candidates' English language proficiency across reading, writing, listening, and speaking.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/Diploma-in-English" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'diploma-english') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>

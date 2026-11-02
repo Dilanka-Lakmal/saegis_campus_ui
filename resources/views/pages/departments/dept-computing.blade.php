@@ -101,7 +101,7 @@
                             The BSc (Hons) in Computer Science intends to provide comprehensive theoretical foundations and practical skills across algorithmic problem solving, software design, and modern computing systems.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/19?slug=bsc-hons-computer-science" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-computer-science') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -123,7 +123,7 @@
                             The BSc (Hons) in Software Engineering prepares students to engineer complex enterprise applications through rigorous software architecture, agile methodologies, and modern programming practices.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/20?slug=bsc-hons-software-engineering" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-software-engineering') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -145,7 +145,7 @@
                             The BSc (Hons) in Information Technology degree delivers specialized knowledge in database management, web systems development, network security, and IT infrastructure management.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/21?slug=bsc-hons-information-technology" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-information-technology') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -167,7 +167,7 @@
                             The Bachelor of Information Technology (BIT) is a three-year degree program providing students with strong practical competence across modern software development and cloud technologies.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/23?slug=bachelor-of-information-technology" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bit') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -202,7 +202,7 @@
                             Pearson BTEC Level 5 HND in Network Engineering offers extensive practical training in network architecture, routing, protocols, and infrastructure security.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/24?slug=btec-hnd-in-computing-network-engineering" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'hnd-network-engineering') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -224,7 +224,7 @@
                             Designed to equip learners with cutting-edge expertise in machine learning, neural networks, natural language processing, and AI application engineering.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/55?slug=btec-artificial-intelligence-ai-solutions-and-applications" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'btec-ai') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -246,7 +246,7 @@
                             A specialized digital security qualification covering vulnerability assessments, ethical hacking, digital forensics, and defensive network security.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/56?slug=btec-cybersecurity" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'btec-cybersecurity') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -281,7 +281,7 @@
                             Offered with Canterbury Christ Church University, this engineering top-up focuses on software engineering patterns, system reliability, and full-stack development.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/42?slug=beng-hons-software-engineering" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'beng-software-engineering') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -303,7 +303,7 @@
                             A specialized top-up programme equipping students with data engineering, big data analytics, visualization, and intelligent decision-support skills.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/49?slug=bsc-hons-data-computing-intelligence" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-data-computing-intelligence') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -325,7 +325,7 @@
                             Delivers specialized training in evidence collection, digital investigation, network forensics, and cybersecurity operations management.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/50?slug=bsc-hons-computer-forensics-cybersecurity" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'bsc-computer-forensics-cybersecurity') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
@@ -360,7 +360,7 @@
                             A 135-credit foundation diploma (540 GLH) providing learners with fundamental computing skills required for direct admission to undergraduate IT degrees.
                         </p>
                         <div class="w-100 text-center btn_dwn mt-auto pt-3">
-                            <a href="https://saegis.ac.lk/degree-program/46?slug=pearson-btec-international-level-3-foundation-diploma-in-information-technology" class="btn_a overlay text-decoration-none">
+                            <a href="{{ route('courses.show', 'foundation-diploma-it') }}" class="btn_a overlay text-decoration-none">
                                 <div class="d-flex align-items-center site_btn_navy overlay text_uppercase">
                                     <div class="inline_block me-2"><div class="btn_circle_white">+</div></div>
                                     <div class="inline_block"><p class="font_white mb-0 fw-bold fs-12">Read More</p></div>
