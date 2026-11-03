@@ -1,1 +1,118 @@
-/* Course curriculum and entry requirements (Member 3) */
+.course-curriculum,
+.course-curriculum__entry {
+    --course-accent: #0b3d91;   /* dark blue lines */
+    --course-plus: #00b8d9;     /* cyan plus icon */
+}
+
+.course-curriculum {
+    padding: 48px 0;
+}
+
+.course-curriculum__heading {
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+}
+
+.course-curriculum__heading::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--course-accent);
+    margin: 8px 0 20px;
+}
+
+.course-curriculum__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.course-curriculum__card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-curriculum__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.course-curriculum__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 14px;
+}
+
+.course-curriculum__title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--course-accent);
+    margin-top: 8px;
+}
+
+.course-curriculum__list,
+.course-curriculum__entry-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.course-curriculum__list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+}
+
+.course-curriculum__list li::before {
+    content: "+";
+    position: absolute;
+    left: 0;
+    color: var(--course-plus);
+    font-weight: 700;
+}
+
+.course-curriculum__electives-title {
+    margin: 16px 0 10px;
+    padding-top: 12px;
+    border-top: 1px dashed #d1d5db;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.course-curriculum__empty {
+    grid-column: 1 / -1;
+    color: #6b7280;
+}
+
+.course-curriculum__entry {
+    background: #f6f7f9;
+    border-top: 4px solid var(--course-accent);
+    border-radius: 8px;
+    padding: 20px 24px;
+    position: sticky;
+    top: 90px;
+}
+
+.course-curriculum__entry-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+    .course-curriculum__entry {
+        position: static;
+    }
+}
+
+@media (max-width: 575px) {
+    .course-curriculum__grid {
+        grid-template-columns: 1fr;
+    }
+}
