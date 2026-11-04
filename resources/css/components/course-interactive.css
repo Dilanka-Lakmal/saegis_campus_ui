@@ -113,3 +113,247 @@
     font-weight: 400;
     font-family: 'Poppins', sans-serif, system-ui;
 }
+
+
+
+/* ==========================================
+   INQUIRY FORM STYLING
+========================================== */
+.bg_ice_blue, 
+.course-inquiry-section {
+    background-color: #f0f4f8;
+}
+
+.inquiry-subtitle {
+    font-size: 18px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.inquiry-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text-cyan {
+    color: #00A8E8 !important;
+}
+
+.text-navy {
+    color: #0b1354 !important;
+}
+
+.heading-line-center {
+    width: 80px;
+    height: 3px;
+    background-color: #00A8E8;
+    border: none;
+    opacity: 1;
+}
+
+.heading-line-center.cyan-line {
+    background-color: #38bdf8;
+}
+
+.inquiry-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.custom-input {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 15px;
+    color: #1e293b;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-input:focus {
+    border-color: #00A8E8;
+    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.15);
+    outline: none;
+}
+
+.inquiry-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #093D85;
+    color: #ffffff;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.inquiry-submit-btn:hover {
+    background-color: #052859;
+    transform: translateY(-2px);
+}
+
+.btn-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    color: #093D85;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.btn-text {
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   INSTITUTIONAL QUOTE STYLING
+========================================== */
+.course-quote-section {
+    background-color: #ffffff;
+}
+
+.institutional-quote-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #334155;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif, system-ui;
+}
+/* ==========================================
+   COURSE STICKY NAVIGATION
+========================================== */
+
+/*
+ * IMPORTANT:
+ * The SECTION is sticky, not the inner DIV.
+ * This allows the navbar to remain sticky
+ * throughout the course page.
+ */
+
+.course-sticky-nav {
+    position: sticky;
+    top: 90px;
+    z-index: 999;
+    width: 100%;
+}
+
+/* The visible blue navigation bar */
+.course-sticky-nav-wrapper {
+    width: 100%;
+    background-color: #0b3c86;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.course-sticky-nav-container {
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
+}
+
+/* Navigation links */
+.nav-sticky-links {
+    list-style: none;
+    gap: 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    flex: 1;
+}
+
+.nav-sticky-links::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-sticky-item {
+    flex-shrink: 0;
+}
+
+.nav-sticky-link {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding: 18px 0;
+    display: inline-block;
+}
+
+.nav-sticky-link:hover,
+.nav-sticky-link.active {
+    color: #ffffff;
+}
+
+.nav-sticky-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5px;
+    background-color: #00adef;
+}
+
+/* Action buttons */
+.nav-sticky-actions {
+    flex-shrink: 0;
+}
+
+.btn-sticky-enquire {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    white-space: nowrap;
+}
+
+.btn-sticky-apply {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: #00adef;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+
+    .course-sticky-nav-container {
+        height: 55px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .nav-sticky-links {
+        gap: 16px;
+    }
+
+    .nav-sticky-link {
+        font-size: 13px;
+        padding: 16px 0;
+    }
+
+    .nav-sticky-actions {
+        display: none !important;
+    }
+}
