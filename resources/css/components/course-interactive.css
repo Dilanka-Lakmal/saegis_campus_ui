@@ -247,6 +247,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     margin-top: 25px;
     margin-bottom: 25px;
+    border-radius: 10px;
 }
 
 .course-nav-wrapper {

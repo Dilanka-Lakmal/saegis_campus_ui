@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get install -y nodejs
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
+# RUN docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd
 
 # Get Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -27,12 +28,13 @@ RUN php artisan route:clear
 RUN php artisan view:clear
 
 # Create SQLite database & run migrations
-RUN touch database/database.sqlite
-RUN php artisan migrate --force
+# RUN touch database/database.sqlite
+# RUN php artisan migrate --force
 
 # Set file permissions for Laravel
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 EXPOSE 8000
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD ["sh", "/var/www/start.sh"]

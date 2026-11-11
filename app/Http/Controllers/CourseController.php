@@ -24,7 +24,7 @@ class CourseController extends Controller
             'pageBanner' => [
                 'title' => $course['title'],
                 'subtitle' => $course['tagline'],
-                 'variant' => 'course',
+                'variant' => 'course',
             ],
         ]);
     }
