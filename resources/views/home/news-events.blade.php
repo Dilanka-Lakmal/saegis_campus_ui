@@ -1,5 +1,11 @@
 
 <div class="news-slider">
+  <header class="news-slider__header">
+    <h2 class="news-slider__title">Latest News &amp; Events</h2>
+    <p class="news-slider__subtitle">
+        Find out all the news and events happening at Saegis Campus, from student achievements to upcoming activities.
+    </p>
+</header>
 
     <div class="news-slider__viewport" id="newsViewport">
         <div class="news-slider__track" id="newsTrack">

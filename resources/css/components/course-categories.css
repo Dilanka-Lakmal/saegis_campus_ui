@@ -1,7 +1,5 @@
 /* =============================================================
    Introduction + Course Categories
-   Colour variables are defined here, scoped to these two sections,
-   so they work even if no global :root variables exist.
 ============================================================= */
 .as-section,
 .course-categories {
@@ -283,12 +281,12 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0;
+    opacity: .55;        /* image shown by default */
     transition: opacity .35s ease;
 }
 
 .course-categories .card:hover img {
-    opacity: .45;
+    opacity: 0;
 }
 
 /* arrow button, top right */
@@ -413,7 +411,7 @@
 
 /* touch screens have no hover, so keep the photo visible */
 @media (hover: none) {
-    .course-categories .card img { opacity: .35; }
+    .course-categories .card img { opacity: .55; }
 }
 
 /* ----- intro section spacing override (kept from before) ----- */

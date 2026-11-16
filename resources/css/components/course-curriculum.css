@@ -1,13 +1,10 @@
-.course-curriculum,
-.course-curriculum__entry {
-    --course-accent: #0b3d91;   /* dark blue lines */
-    --course-plus: #00b8d9;     /* cyan plus icon */
-}
-
 .course-curriculum {
+    --course-accent: #0b3d91;
+    --course-plus: #00b8d9;
     padding: 48px 0;
 }
 
+/* Course Contents heading */
 .course-curriculum__heading {
     font-size: 1.5rem;
     margin: 0 0 8px;
@@ -22,9 +19,10 @@
     margin: 8px 0 20px;
 }
 
+/* 3 boxes per row */
 .course-curriculum__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     align-items: stretch;
 }
@@ -91,28 +89,106 @@
     color: #6b7280;
 }
 
+/* Entry Requirements: compact box under the semester cards */
 .course-curriculum__entry {
+    max-width: 520px;
+    margin-top: 28px;
     background: #f6f7f9;
     border-top: 4px solid var(--course-accent);
-    border-radius: 8px;
-    padding: 20px 24px;
-    position: sticky;
-    top: 90px;
+    padding: 14px 20px;
+}
+
+.course-curriculum__entry-heading {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+}
+
+.course-curriculum__entry-heading::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--course-accent);
+    margin-top: 6px;
 }
 
 .course-curriculum__entry-list li {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
     line-height: 1.5;
 }
 
+/* Tablet: 2 per row */
 @media (max-width: 991px) {
-    .course-curriculum__entry {
-        position: static;
+    .course-curriculum__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
+/* Mobile: 1 per row */
 @media (max-width: 575px) {
     .course-curriculum__grid {
         grid-template-columns: 1fr;
     }
+
+    .course-curriculum__entry {
+        max-width: none;
+    }
+}
+
+.course-curriculum__card {
+    background: #EAF6FF;
+    border: 1px solid #D5EAF7;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-curriculum__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(9, 61, 133, 0.15);
+}
+
+.course-curriculum__title {
+    color: #093D85;
+}
+
+.course-curriculum__list li {
+    color: #1A1D2E;
+}
+
+.course-curriculum__list li::before {
+    color: #00A8E8;
+}
+
+.course-curriculum__entry {
+    max-width: 520px;
+    margin-top: 28px;
+    background: #093D85;
+    border-top: 4px solid #00A8E8;
+    border-radius: 8px;
+    padding: 14px 20px;
+}
+
+.course-curriculum__entry-heading {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+}
+
+.course-curriculum__entry-heading::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #00A8E8;
+    margin-top: 6px;
+}
+
+.course-curriculum__entry-list li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }

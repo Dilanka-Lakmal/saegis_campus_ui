@@ -216,7 +216,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
                         <div class="card-img-box margin_bottom_18">
-                            <img src="/images/programs/management/btec-artificial-intelligence-(ai)-solutions-and-applications-1788501539.jpg" class="img-fluid rounded-2 w-100" alt="BTEC AI Solutions" onerror="this.onerror=null;this.src='/images/programs/btec-artificial-intelligence-(ai)-solutions-and-applications-1788501539.jpg';">
+                            <img src="/images/programs/management/bsc-(hons)-computer-science-1756412989.jpg" class="img-fluid rounded-2 w-100" alt="BTEC AI Solutions" onerror="this.onerror=null;this.src='/images/programs/btec-artificial-intelligence-(ai)-solutions-and-applications-1788501539.jpg';">
                         </div>
                         <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">BTEC Artificial Intelligence (AI) Solutions & Applications</h2>
                         <div class="card-full-line margin_bottom_15"></div>
@@ -238,7 +238,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
                         <div class="card-img-box margin_bottom_18">
-                            <img src="/images/programs/management/btec-cybersecurity-1788501832.jpg" class="img-fluid rounded-2 w-100" alt="BTEC Cybersecurity" onerror="this.onerror=null;this.src='/images/programs/btec-cybersecurity-1788501832.jpg';">
+                            <img src="/images/programs/management/bachelor-of-information-technology-1756413138.jpg" class="img-fluid rounded-2 w-100" alt="BTEC Cybersecurity" onerror="this.onerror=null;this.src='/images/programs/btec-cybersecurity-1788501832.jpg';">
                         </div>
                         <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">BTEC Cybersecurity</h2>
                         <div class="card-full-line margin_bottom_15"></div>
@@ -295,7 +295,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
                         <div class="card-img-box margin_bottom_18">
-                            <img src="/images/programs/management/bsc-(hons)-data-computing-intelligence-1787542113.png" class="img-fluid rounded-2 w-100" alt="BSc Data Computing Intelligence" onerror="this.onerror=null;this.src='/images/programs/bsc-(hons)-data-computing-intelligence-1787542113.png';">
+                            <img src="/images/programs/management/bsc-(hons)-software-engineering-1756413041.jpg" class="img-fluid rounded-2 w-100" alt="BSc Data Computing Intelligence" onerror="this.onerror=null;this.src='/images/programs/bsc-(hons)-data-computing-intelligence-1787542113.png';">
                         </div>
                         <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">BSc (Hons) Data Computing Intelligence</h2>
                         <div class="card-full-line margin_bottom_15"></div>
@@ -317,7 +317,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="common_box shadow-sm flex-column h-100 bg-white rounded-3 p-3 d-flex">
                         <div class="card-img-box margin_bottom_18">
-                            <img src="/images/programs/management/bsc-(hons)-computer-forensics-and-security-1787543630.jpg" class="img-fluid rounded-2 w-100" alt="BSc Computer Forensics" onerror="this.onerror=null;this.src='/images/programs/bsc-(hons)-computer-forensics-and-security-1787543630.jpg';">
+                            <img src="/images/programs/management/bachelor-of-information-technology-1756413138.jpg" class="img-fluid rounded-2 w-100" alt="BSc Computer Forensics" onerror="this.onerror=null;this.src='/images/programs/bsc-(hons)-computer-forensics-and-security-1787543630.jpg';">
                         </div>
                         <h2 class="margin_bottom_12 text_align_left fs-18 fw-bold font_navy_blue">BSc (Hons) Computer Forensics & Cybersecurity</h2>
                         <div class="card-full-line margin_bottom_15"></div>
