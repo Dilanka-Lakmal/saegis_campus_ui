@@ -17,7 +17,7 @@
                         <a href="/" class="font_white">Home</a>
                     </div>
                     <div class="d-flex me-4 align-items-center">
-                        <a href="/faculty-of-Management" class="font_white">Faculty of Management</a>
+                        <a href="{{ route('faculty.management') }}" class="font_white">Faculty of Management</a>
                     </div>
                     <div class="d-flex me-4 align-items-center">
                         <span class="font_white">Department of Languages</span>
