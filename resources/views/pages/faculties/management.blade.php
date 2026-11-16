@@ -28,15 +28,15 @@
         </div>
 
         <div class="department-body">
-          <span class="card-number">01 / DEPARTMENT</span>
+          
           <h3>Department of Management</h3>
           <p>
             Explore management education, business knowledge,
             leadership, and professional development.
           </p>
-          <a class="text-link" href="department-of-management">
-            Explore Department <span>↗</span>
-          </a>
+          <a class="text-link" href="{{ route('department.management') }}">
+           Read More <span>↗</span>
+</a>
         </div>
       </article>
 
@@ -50,15 +50,15 @@
         </div>
 
         <div class="department-body">
-          <span class="card-number">02 / DEPARTMENT</span>
+          
           <h3>Department of Languages</h3>
           <p>
             Develop language, communication, and academic skills
             to support your educational and professional journey.
           </p>
-          <a class="text-link" href="department-of-languages">
-            Explore Department <span>↗</span>
-          </a>
+          <a class="text-link" href="{{ route('department.languages') }}">
+  Read More </span>↗<span>
+</a>
         </div>
       </article>
 
