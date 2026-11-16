@@ -30,7 +30,6 @@
         </div>
 
         <div class="department-body">
-          <span class="card-number">01 / DEPARTMENT</span>
           <h3>Department of Computing</h3>
           <p>
             Explore software engineering, programming, information
@@ -53,7 +52,6 @@
         </div>
 
         <div class="department-body">
-          <span class="card-number">02 / DEPARTMENT</span>
           <h3>Department of Technology</h3>
           <p>
             Discover technology-focused learning, digital innovation,
