@@ -78,7 +78,7 @@
         <h3>Faculty of Postgraduate Studies</h3>
         <p>Open doors to a world of cultures - Learn languages, expand horizons, and connect with the world!</p>
 
-        <a href="postgraduate-courses.html" class="faculty-link">
+        <a href="{{ route('faculty.graduate') }}" class="faculty-link">
             <span>Explore programmes<span class="visually-hidden"> – Faculty of Postgraduate Studies</span></span>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
@@ -106,7 +106,7 @@
             <li><a href="canterbury.html">Canterbury Christ Church University</a></li>
         </ul>
 
-        <a href="international-studies.html" class="faculty-link">
+        <a href="{{ route('faculty.international') }}" class="faculty-link">
             <span>Explore programmes<span class="visually-hidden"> – International Programs</span></span>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>

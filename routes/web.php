@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/faculty-of-management', [FacultyController::class, 'management'])->name('faculty.management');
 Route::get('/faculty-of-computing', [FacultyController::class, 'computing'])->name('faculty.computing');
 
+Route::get('/postgraduate-courses', [FacultyController::class, 'graduate'])->name('faculty.graduate');
+Route::get('/international-studies', [FacultyController::class, 'international'])->name('faculty.international');
+
 // Department pages
 Route::get('/department-of-management', [DepartmentController::class, 'management'])->name('department.management');
 Route::get('/department-of-languages', [DepartmentController::class, 'languages'])->name('department.languages');

@@ -131,4 +131,68 @@ return [
         'title'      => 'BTEC Cybersecurity',
         'tagline'    => 'The right place for your Higher Education!',
     ],
+
+        // ---------- General (no faculty shown on live site) ----------
+    'hnd-applied-sciences-biotechnology' => [
+        'department' => 'general',
+        'title'      => 'BTEC HND in Applied Science (Biotechnology)',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'dmie' => [
+        'department' => 'general',
+        'title'      => 'Diploma in Management, IT and English (DMIE)',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+
+        // ---------- New: Graduate Studies & International Programmes ----------
+    'mba-international' => [
+        'department' => 'management',
+        'title'      => 'MBA International',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'mba-insurance-management' => [
+        'department' => 'management',
+        'title'      => 'MBA International in Insurance Management',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'mba-supply-chain-logistics' => [
+        'department' => 'management',
+        'title'      => 'MBA International in Supply Chain and Logistics Management',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'mba-hospitality-tourism' => [
+        'department' => 'management',
+        'title'      => 'MBA International in International Hospitality and Tourism Management',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'foundation-business' => [
+        'department' => 'management',
+        'title'      => 'Pearson BTEC Level 3 International Foundation Program for Higher Education in Business',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'hnd-travel-tourism' => [
+        'department' => 'management',
+        'title'      => 'BTEC HND in International Travel and Tourism Management',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'specialist-diploma-event-management' => [
+        'department' => 'management',
+        'title'      => 'Pearson BTEC International Level 3 Specialist Diploma in International Event Management and Marketing Studies',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'msc-data-intelligence' => [
+        'department' => 'computing',
+        'title'      => 'MSc Data Intelligence',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'hnd-software-engineering' => [
+        'department' => 'computing',
+        'title'      => 'BTEC HND in Computing (Software Engineering)',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
+    'hnd-data-analytics' => [
+        'department' => 'computing',
+        'title'      => 'BTEC HND in Computing (Data Analytics)',
+        'tagline'    => 'The right place for your Higher Education!',
+    ],
 ];
