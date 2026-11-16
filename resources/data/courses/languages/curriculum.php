@@ -3,10 +3,8 @@
 <?php
 
 // resources/data/courses/languages/curriculum.php
-// Source: live Saegis course pages. Only obvious typos and numbering were cleaned.
-//
-// Keys inside 'semesters' can be numbers (shown as "Semester 1") or text labels
-// (shown as written, e.g. 'First 3 Months'). See the note in the partial.
+
+
 
 return [
 

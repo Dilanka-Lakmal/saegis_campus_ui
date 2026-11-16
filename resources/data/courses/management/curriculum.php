@@ -1,7 +1,6 @@
 <?php
 
 // resources/data/courses/management/curriculum.php
-// Source: live Saegis course pages. Only obvious typos were fixed.
 
 $alPasses = [
     'Three "S" passes in any stream at one and the same sitting at the GCE (Advanced Level) Examination conducted by the Department of Examinations of Sri Lanka, or an equivalent qualification.',

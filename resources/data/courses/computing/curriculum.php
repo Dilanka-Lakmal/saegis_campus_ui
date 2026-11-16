@@ -1,12 +1,8 @@
 <?php
 
 // resources/data/courses/computing/curriculum.php
-// Source: live Saegis course pages. Only obvious typos and broken line splits were cleaned.
-//
-// Each semester is either a plain list of subjects, or an array with
-// 'subjects', 'electives_label' and 'electives' (shown in the same card).
-
 // Ministry computing degrees (BSc Computer Science, BSc Software Engineering).
+
 $ministryComputingEntry = [
     'Minimum academic qualifications:',
     'a) Passes in three (03) subjects (in Physical Science Stream or any three subjects with Mathematics and Physics) at the GCE A/L Examination (Sri Lanka or London) in one and the same sitting but not exceeding three sittings.',
@@ -16,8 +12,8 @@ $ministryComputingEntry = [
     'c) Minimum of 30% for the Common General Test in any of the settings indicated in a) or b) above.',
 ];
 
-// Pearson BTEC HND programmes in computing. The live pages show this text
-// run together, so the options are separated here. Please verify the wording.
+// Pearson BTEC HND programmes in computing.
+
 $hndComputingEntry = [
     'GCE O/L (Local/London) 6 simple passes including English WITH GCE A/L (Local/London) minimum 2 passes in any stream',
     'OR GCE O/L (Local/London) 6 passes AND sat for the GCE A/L',
