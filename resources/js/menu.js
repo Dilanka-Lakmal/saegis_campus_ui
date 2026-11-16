@@ -18,8 +18,8 @@ const menuData = {
                 links: [
                     { label: "Management, Humanities & Social Sciences", url: "/faculty-of-management" },
                     { label: "Computing & Technology", url: "/faculty-of-computing" },
-                    { label: "Faculty of Graduate Studies", url: "#graduate-studies" },
-                    { label: "International Programmes", url: "#international-programmes" }
+                    { label: "Faculty of Graduate Studies", url: "/postgraduate-courses" },
+                    { label: "International Programmes", url: "/international-studies" }
                 ]
             },
             {
