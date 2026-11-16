@@ -10,14 +10,10 @@
                 <a href="#course-stats" class="course-nav-item">Key Stats</a>
                 <a href="#course-content" class="course-nav-item">Course Content</a>
                 <a href="#entry-requirements" class="course-nav-item">Entry Requirements</a>
-                <a href="#inner_contact_form" class="course-nav-item">Inquire</a>
             </div>
 
             <!-- Action Buttons Area -->
             <div class="course-nav-cta">
-                <a href="#inner_contact_form" class="btn-sticky-enquire">
-                    <i class="far fa-comment-dots me-1"></i> Enquire
-                </a>
                 <a href="#inner_contact_form" class="btn-sticky-apply">
                     Apply Now <i class="fas fa-chevron-right ms-1"></i>
                 </a>
