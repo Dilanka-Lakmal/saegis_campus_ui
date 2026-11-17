@@ -233,21 +233,31 @@
 
 
 
-
 /* ==========================================
-   DESKTOP COURSE STICKY NAV (Matching Dept Nav)
+   DESKTOP COURSE STICKY NAV
 ========================================== */
 .course-sticky-nav-wrapper {
     position: sticky;
-    top: 75px;
+    top: 86px; /* Matches main header height so it never slides under it */
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 990; /* Just below .main-header dropdowns */
     background-color: #0b3c86;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 30px; /* Keeps clear gap below the hero banner */
+    margin-bottom: 30px;
     border-radius: 10px;
+}
+
+/* Smooth anchor scroll fallback */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensures sections stop below both headers even on direct URL hash load */
+section[id],
+aside[id] {
+    scroll-margin-top: 170px;
 }
 
 .course-nav-wrapper {
@@ -302,27 +312,6 @@
     flex-shrink: 0;
 }
 
-.btn-sticky-enquire {
-    display: inline-flex;
-    align-items: center;
-    padding: 7px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 6px;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.08);
-    transition: all 0.25s ease;
-    white-space: nowrap;
-}
-
-.btn-sticky-enquire:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
 .btn-sticky-apply {
     display: inline-flex;
     align-items: center;
@@ -347,9 +336,14 @@
 ========================================== */
 @media (max-width: 768px) {
     .course-sticky-nav-wrapper {
-        top: 65px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        top: 70px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    section[id],
+    aside[id] {
+        scroll-margin-top: 210px;
     }
 
     .course-nav-wrapper {
@@ -359,11 +353,10 @@
         padding: 10px 0;
     }
 
-    /* Wrap all navigation links into multi-row pill buttons */
     .course-nav-links {
         width: 100%;
         display: flex;
-        flex-wrap: wrap; /* Allows links to break into clean new rows */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 6px 8px;
         white-space: normal;
@@ -387,17 +380,15 @@
     }
 
     .course-nav-item.active::after {
-        display: none; /* Hide bottom border line on mobile pills */
+        display: none;
     }
 
-    /* Action Buttons: Equal Full-Width Side-by-Side */
     .course-nav-cta {
         width: 100%;
         display: flex;
         gap: 8px;
     }
 
-    .btn-sticky-enquire,
     .btn-sticky-apply {
         flex: 1;
         justify-content: center;

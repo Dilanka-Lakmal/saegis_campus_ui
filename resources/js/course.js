@@ -1,115 +1,88 @@
-// Course page scripts (Member 4)
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Run only on course pages, so other pages never break
-    if (!document.getElementById('course_sticky_nav')) return;
-     
-    // Member 4: sticky nav, scroll-spy, inquiry form and carousel go here
-});
-
 // ==========================================
 // COURSE PAGE SCRIPTS - MEMBER 4
 // Sticky Navigation, Smooth Scroll & Scroll Spy
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function () {
-
-    // Check if this is a course page
     const stickyNav = document.getElementById('course_sticky_nav');
+    if (!stickyNav) return;
 
-    if (!stickyNav) {
-        return;
-    }
-
-    const navLinks = document.querySelectorAll('.nav-sticky-link');
+    const mainHeader = document.querySelector('.main-header');
+    const navLinks = document.querySelectorAll('#course_sticky_nav .course-nav-item');
+    const allAnchorLinks = document.querySelectorAll('#course_sticky_nav a[href^="#"]');
     const sections = [];
 
-    // Find all sections connected to navigation links
+    // Dynamically keep sticky nav flush below the main header
+    function syncStickyTop() {
+        const headerHeight = mainHeader ? mainHeader.offsetHeight : 86;
+        stickyNav.style.top = headerHeight + 'px';
+    }
+
+    syncStickyTop();
+    window.addEventListener('resize', syncStickyTop);
+
+    // Map nav links to their target DOM sections
     navLinks.forEach(function (link) {
-
         const targetId = link.getAttribute('href');
-
         if (targetId && targetId.startsWith('#')) {
-
             const section = document.querySelector(targetId);
-
             if (section) {
                 sections.push({
                     link: link,
                     element: section
                 });
             }
-
-            // Smooth scroll when navigation link is clicked
-            link.addEventListener('click', function (e) {
-
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-
-                    e.preventDefault();
-
-                    // Get current sticky navigation height
-                    const navHeight = stickyNav.offsetHeight;
-
-                    // Calculate target position
-                    const elementPosition =
-                        targetElement.getBoundingClientRect().top +
-                        window.pageYOffset;
-
-                    const offsetPosition =
-                        elementPosition - navHeight - 15;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
         }
     });
 
+    // Smooth scroll with exact combined header offset for all links (including Apply Now)
+    allAnchorLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-    // ==========================================
-    // SCROLL SPY
-    // ==========================================
+            if (targetElement) {
+                e.preventDefault();
 
+                const headerHeight = mainHeader ? mainHeader.offsetHeight : 86;
+                const stickyHeight = stickyNav.offsetHeight;
+                const totalOffset = headerHeight + stickyHeight + 20;
+
+                const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: elementTop - totalOffset,
+                    behavior: 'smooth'
+                });
+
+                // Update URL hash cleanly without browser jump
+                history.pushState(null, '', targetId);
+            }
+        });
+    });
+
+    // Scroll Spy using getBoundingClientRect() (accurate regardless of nested containers)
     function updateActiveLink() {
-
-        // Position used to determine current section
-        const scrollPosition =
-            window.scrollY + stickyNav.offsetHeight + 100;
+        const headerHeight = mainHeader ? mainHeader.offsetHeight : 86;
+        const stickyHeight = stickyNav.offsetHeight;
+        const triggerOffset = headerHeight + stickyHeight + 40;
 
         let currentSection = null;
 
         sections.forEach(function (item) {
-
-            const sectionTop = item.element.offsetTop;
-            const sectionHeight = item.element.offsetHeight;
-
-            if (
-                scrollPosition >= sectionTop &&
-                scrollPosition < sectionTop + sectionHeight
-            ) {
+            const rect = item.element.getBoundingClientRect();
+            if (rect.top <= triggerOffset && rect.bottom > triggerOffset) {
                 currentSection = item;
             }
         });
 
-        // Update active navigation link
         if (currentSection) {
-
             navLinks.forEach(function (link) {
                 link.classList.remove('active');
             });
-
             currentSection.link.classList.add('active');
         }
     }
 
-    // Run while scrolling
-    window.addEventListener('scroll', updateActiveLink);
-
-    // Run once when page loads
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
     updateActiveLink();
-
 });
