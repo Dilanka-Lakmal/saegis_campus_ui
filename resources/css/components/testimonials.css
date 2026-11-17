@@ -84,7 +84,7 @@
     list-style:none;
     margin:0;
     padding:4px 0;
-    animation: pa-scroll 30s linear infinite;
+    animation: pa-scroll 48s linear infinite;
 }
 
 .pa-marquee:hover .pa-track{ animation-play-state: paused; } /* pause to let a visitor read a logo */
