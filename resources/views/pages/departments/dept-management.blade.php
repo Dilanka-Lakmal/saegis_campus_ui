@@ -40,9 +40,9 @@
                 <a href="#diplomas" class="dept-nav-item">Diplomas</a>
             </div>
             <div class="dept-nav-cta">
-                <a href="#" class="dept-btn-enquire" data-bs-toggle="modal" data-bs-target="#registerModal">
+                <!-- <a href="#" class="dept-btn-enquire" data-bs-toggle="modal" data-bs-target="#registerModal">
                     <i class="far fa-comment-dots me-1"></i> Enquire
-                </a>
+                </a> -->
                 <a href="#" class="dept-btn-apply" data-bs-toggle="modal" data-bs-target="#registerModal">
                     Apply Now <i class="fas fa-chevron-right ms-1"></i>
                 </a>
